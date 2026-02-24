@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mule xmlns="http://www.mulesoft.org/schema/mule/core"
+      xmlns:http="http://www.mulesoft.org/schema/mule/http"
+      xmlns:apikit="http://www.mulesoft.org/schema/mule/mule-apikit"
+      xmlns:ee="http://www.mulesoft.org/schema/mule/ee/core"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="
+        http://www.mulesoft.org/schema/mule/core http://www.mulesoft.org/schema/mule/core/current/mule.xsd
+        http://www.mulesoft.org/schema/mule/http http://www.mulesoft.org/schema/mule/http/current/mule-http.xsd
+        http://www.mulesoft.org/schema/mule/mule-apikit http://www.mulesoft.org/schema/mule/mule-apikit/current/mule-apikit.xsd
+        http://www.mulesoft.org/schema/mule/ee/core http://www.mulesoft.org/schema/mule/ee/core/current/mule-ee.xsd">
+
+    <http:listener-config name="e-test-rmunozpardo-httpListenerConfig">
+        <http:listener-connection host="0.0.0.0" port="8083"/>
+    </http:listener-config>
+
+    <apikit:config name="e-test-rmunozpardo-config"
+                   api="api.raml"
+                   outboundHeadersMapName="outboundHeaders"
+                   httpStatusVarName="httpStatus"/>
+
+    <http:request-config name="process-api-requester">
+        <http:request-connection host="localhost" port="8082"/>
+    </http:request-config>
+
+    <flow name="e-test-rmunozpardo-main">
+        <http:listener config-ref="e-test-rmunozpardo-httpListenerConfig" path="/api/*">
+            <http:response statusCode="#[vars.httpStatus default 200]">
+                <http:headers>#[vars.outboundHeaders default {}]</http:headers>
+            </http:response>
+            <http:error-response statusCode="#[vars.httpStatus default 500]">
+                <http:body>#[payload]</http:body>
+                <http:headers>#[vars.outboundHeaders default {}]</http:headers>
+            </http:error-response>
+        </http:listener>
+
+        <apikit:router config-ref="e-test-rmunozpardo-config"/>
+
+        <!-- Opción 1: referencia a handler global (autocerrado) -->
+        <error-handler ref="global-error-handler"/>
+        <!-- O BIEN Opción 2: handler inline (sin ref, con cierre)
+        <error-handler>
+            <on-error-propagate>
+                <ee:transform>
+                    <ee:message>
+                        <ee:set-payload><![CDATA[
+                            %dw 2.0
+                            output application/json
+                            -&#45;&#45;
+                            { message: "Experience layer error" }
+                        ]]></ee:set-payload>
+                    </ee:message>
+                </ee:transform>
+            </on-error-propagate>
+        </error-handler>
+        -->
+    </flow>
+
+    <flow name="get:\accounts-e-test-rmunozpardo-config">
+        <http:request method="GET" config-ref="process-api-requester" path="/accounts"/>
+
+        <ee:transform>
+            <ee:message>
+                <ee:set-payload><![CDATA[
+                    %dw 2.0
+                    output application/json
+                    ---
+                    payload
+                ]]></ee:set-payload>
+            </ee:message>
+        </ee:transform>
+
+        <!-- Si usas global -->
+        <error-handler ref="global-error-handler"/>
+    </flow>
+
+    <!-- Handler global (si lo usas) -->
+    <error-handler name="global-error-handler">
+        <on-error-propagate>
+            <ee:transform>
+                <ee:message>
+                    <ee:set-payload><![CDATA[
+                        %dw 2.0
+                        output application/json
+                        ---
+                        { message: "Experience layer error" }
+                    ]]></ee:set-payload>
+                </ee:message>
+            </ee:transform>
+        </on-error-propagate>
+    </error-handler>
+
+</mule>

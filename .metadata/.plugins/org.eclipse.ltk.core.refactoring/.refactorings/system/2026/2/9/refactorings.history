@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;system/src/main/mule/s-test-rmunozpardo.xml&apos; to &apos;system.xml&apos;" description="Rename resource &apos;s-test-rmunozpardo.xml&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="src/main/mule/s-test-rmunozpardo.xml" name="system.xml" stamp="1771947199021" updateReferences="true"/>
+</session>

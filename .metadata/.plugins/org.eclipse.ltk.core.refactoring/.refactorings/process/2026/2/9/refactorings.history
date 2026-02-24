@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;process/src/main/mule/p-test-rmunozpardo.xml&apos; to &apos;process.xml&apos;" description="Rename resource &apos;p-test-rmunozpardo.xml&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="src/main/mule/p-test-rmunozpardo.xml" name="process.xml" stamp="1771947207275" updateReferences="true"/>
+</session>
