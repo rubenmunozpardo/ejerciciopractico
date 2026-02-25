@@ -5,8 +5,8 @@
     <stringAttribute key="launch_mule_server_version" value="org.mule.tooling.server.4.11.ee"/>
     <stringAttribute key="maven.command.line" value=""/>
     <booleanAttribute key="maven.snapshot.updates" value="false"/>
-    <stringAttribute key="mule-agent-port" value="60011"/>
-    <stringAttribute key="mule-agent-token-auth" value="e9b39dac-70fe-48c6-ba20-f86823f7cd5f"/>
+    <stringAttribute key="mule-agent-port" value="51607"/>
+    <stringAttribute key="mule-agent-token-auth" value="d52a8129-531e-4517-8a46-75957c08043f"/>
     <listAttribute key="mule-project-names">
         <listEntry value="experience"/>
         <listEntry value="process"/>
@@ -15,7 +15,7 @@
     <intAttribute key="mule.debug.payload.max.collection.size" value="100"/>
     <booleanAttribute key="org.eclipse.debug.core.ATTR_FORCE_SYSTEM_CONSOLE_ENCODING" value="false"/>
     <mapAttribute key="org.eclipse.debug.core.environmentVariables">
-        <mapEntry key="env" value="local"/>
+        <mapEntry key="env" value="dev"/>
     </mapAttribute>
     <booleanAttribute key="org.eclipse.jdt.launching.ATTR_ATTR_USE_ARGFILE" value="false"/>
     <booleanAttribute key="org.eclipse.jdt.launching.ATTR_SHOW_CODEDETAILS_IN_EXCEPTION_MESSAGES" value="true"/>

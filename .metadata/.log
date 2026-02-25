@@ -2635,3 +2635,314 @@ Caused by: java.nio.file.AccessDeniedException: C:\AnypointStudio\AnypointStudio
 
 !ENTRY org.mule.tooling.maven 1 0 2026-02-25 16:00:10.658
 !MESSAGE  *** 10136 EmbeddedMavenRunner [configuration=MavenPreferences [isDontWarnAgainIfNoInstallationFoundChecked()=false, isGlobalMavenSupportEnabled()=true, getMavenInstallationHome()=C:\maven, getMavenOpts()=, getDefaultGroupId()=com.mycompany, getBaseCommandline()=mvn clean package -nsu -DskipMunitTests, isDisplayRuntimeVersionWarning()=true, isExternalInstallation()=false]]
+
+!ENTRY org.mule.tooling.runtime 1 0 2026-02-25 16:15:10.588
+!MESSAGE Starting shell termination command "[taskkill, /F, /PID, 11708]"
+
+!ENTRY org.mule.tooling.runtime 1 0 2026-02-25 16:15:10.654
+!MESSAGE Finished shell termination command "[taskkill, /F, /PID, 11708]"
+
+!ENTRY org.mule.tooling.runtime 2 0 2026-02-25 16:15:11.226
+!MESSAGE Termination command ShellTerminationCommand [getTerminationCommand()=[taskkill, /F, /PID, 11708]] indicate retry action is necessary, moving on to next one
+
+!ENTRY org.mule.tooling.runtime 1 0 2026-02-25 16:15:11.227
+!MESSAGE Starting shell termination command "[taskkill, /F, /PID, 1304]"
+
+!ENTRY org.mule.tooling.runtime 1 0 2026-02-25 16:15:11.310
+!MESSAGE Finished shell termination command "[taskkill, /F, /PID, 1304]"
+
+!ENTRY org.mule.tooling.runtime 2 0 2026-02-25 16:15:11.889
+!MESSAGE Termination command ShellTerminationCommand [getTerminationCommand()=[taskkill, /F, /PID, 1304]] indicate retry action is necessary, moving on to next one
+
+!ENTRY org.mule.tooling.maven 1 0 2026-02-25 16:15:27.432
+!MESSAGE  *** 11307 EmbeddedMavenRunner [configuration=MavenPreferences [isDontWarnAgainIfNoInstallationFoundChecked()=false, isGlobalMavenSupportEnabled()=true, getMavenInstallationHome()=C:\maven, getMavenOpts()=, getDefaultGroupId()=com.mycompany, getBaseCommandline()=mvn clean package -nsu -DskipMunitTests, isDisplayRuntimeVersionWarning()=true, isExternalInstallation()=false]]
+
+!ENTRY org.mule.tooling.maven 1 0 2026-02-25 16:15:39.787
+!MESSAGE  *** 12313 EmbeddedMavenRunner [configuration=MavenPreferences [isDontWarnAgainIfNoInstallationFoundChecked()=false, isGlobalMavenSupportEnabled()=true, getMavenInstallationHome()=C:\maven, getMavenOpts()=, getDefaultGroupId()=com.mycompany, getBaseCommandline()=mvn clean package -nsu -DskipMunitTests, isDisplayRuntimeVersionWarning()=true, isExternalInstallation()=false]]
+
+!ENTRY org.mule.tooling.maven 1 0 2026-02-25 16:15:49.811
+!MESSAGE  *** 9978 EmbeddedMavenRunner [configuration=MavenPreferences [isDontWarnAgainIfNoInstallationFoundChecked()=false, isGlobalMavenSupportEnabled()=true, getMavenInstallationHome()=C:\maven, getMavenOpts()=, getDefaultGroupId()=com.mycompany, getBaseCommandline()=mvn clean package -nsu -DskipMunitTests, isDisplayRuntimeVersionWarning()=true, isExternalInstallation()=false]]
+
+!ENTRY org.mule.tooling.core 2 0 2026-02-25 16:31:49.139
+!MESSAGE Couldn't parse DW script as KeyValue pairs
+
+!ENTRY org.mule.tooling.core 2 0 2026-02-25 16:31:49.326
+!MESSAGE Couldn't parse DW script as KeyValue pairs
+
+!ENTRY org.mule.tooling.maven 1 0 2026-02-25 16:32:46.532
+!MESSAGE  *** 62203 EmbeddedMavenRunner [configuration=DefaultMavenRunnerConfiguration [externalInstallation=false, mavenInstallationHome=C:\maven, mavenOpts=]]
+
+!ENTRY org.mule.tooling.maven 1 0 2026-02-25 16:33:24.555
+!MESSAGE  *** 22468 EmbeddedMavenRunner [configuration=DefaultMavenRunnerConfiguration [externalInstallation=false, mavenInstallationHome=C:\maven, mavenOpts=]]
+
+!ENTRY org.mule.tooling.runtime 1 0 2026-02-25 16:39:53.489
+!MESSAGE Starting shell termination command "[taskkill, /F, /PID, 28196]"
+
+!ENTRY org.mule.tooling.runtime 1 0 2026-02-25 16:39:53.592
+!MESSAGE Finished shell termination command "[taskkill, /F, /PID, 28196]"
+
+!ENTRY org.mule.tooling.runtime 2 0 2026-02-25 16:39:54.252
+!MESSAGE Termination command ShellTerminationCommand [getTerminationCommand()=[taskkill, /F, /PID, 28196]] indicate retry action is necessary, moving on to next one
+
+!ENTRY org.mule.tooling.runtime 1 0 2026-02-25 16:39:54.270
+!MESSAGE Starting shell termination command "[taskkill, /F, /PID, 13888]"
+
+!ENTRY org.mule.tooling.runtime 1 0 2026-02-25 16:39:54.343
+!MESSAGE Finished shell termination command "[taskkill, /F, /PID, 13888]"
+
+!ENTRY org.mule.tooling.runtime 2 0 2026-02-25 16:39:54.929
+!MESSAGE Termination command ShellTerminationCommand [getTerminationCommand()=[taskkill, /F, /PID, 13888]] indicate retry action is necessary, moving on to next one
+
+!ENTRY org.mule.tooling.core 4 0 2026-02-25 16:39:58.378
+!MESSAGE Could not terminate launch system
+!STACK 0
+java.lang.RuntimeException: Could not terminate launch system
+	at org.mule.tooling.runtime.launch.MuleRuntimeProcessLaunchDelegate.terminateLaunchSync(MuleRuntimeProcessLaunchDelegate.java:936)
+	at org.mule.tooling.runtime.launch.MuleRuntimeProcessLaunchDelegate.removeAllMuleLaunchesBut(MuleRuntimeProcessLaunchDelegate.java:894)
+	at org.mule.tooling.runtime.launch.MuleRuntimeProcessLaunchDelegate.resolveConflictingLaunches(MuleRuntimeProcessLaunchDelegate.java:830)
+	at org.mule.tooling.runtime.launch.MuleRuntimeProcessLaunchDelegate.launch(MuleRuntimeProcessLaunchDelegate.java:295)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:805)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:716)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1038)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$1.run(DebugUIPlugin.java:1241)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.mule.tooling.core 2 0 2026-02-25 16:40:10.256
+!MESSAGE Cannot delete C:\AnypointStudio\AnypointStudio\plugins\org.mule.tooling.server.4.11.ee_7.24.0.202602021436\mule\apps
+!STACK 0
+org.apache.commons.io.IOExceptionList: 3 exception(s): [org.apache.commons.io.IOIndexedException: IOException #0: Cannot delete file: C:\AnypointStudio\AnypointStudio\plugins\org.mule.tooling.server.4.11.ee_7.24.0.202602021436\mule\apps\experience, org.apache.commons.io.IOIndexedException: IOException #3: Cannot delete file: C:\AnypointStudio\AnypointStudio\plugins\org.mule.tooling.server.4.11.ee_7.24.0.202602021436\mule\apps\process-anchor.txt, org.apache.commons.io.IOIndexedException: IOException #5: Cannot delete file: C:\AnypointStudio\AnypointStudio\plugins\org.mule.tooling.server.4.11.ee_7.24.0.202602021436\mule\apps\system-anchor.txt]
+	at org.apache.commons.io.IOExceptionList.checkEmpty(IOExceptionList.java:50)
+	at org.apache.commons.io.function.IOStream.forAll(IOStream.java:357)
+	at org.apache.commons.io.function.IOStreams.forAll(IOStreams.java:42)
+	at org.apache.commons.io.function.IOStreams.forAll(IOStreams.java:36)
+	at org.apache.commons.io.function.IOConsumer.forAll(IOConsumer.java:82)
+	at org.apache.commons.io.FileUtils.cleanDirectory(FileUtils.java:381)
+	at org.mule.tooling.core.io.MuleResourceUtils.cleanDirectory(MuleResourceUtils.java:991)
+	at org.mule.tooling.runtime.controller.MuleController.stop(MuleController.java:241)
+	at org.mule.tooling.runtime.launch.MuleRuntimeProcessLaunchDelegate.launchesTerminated(MuleRuntimeProcessLaunchDelegate.java:1080)
+	at org.eclipse.debug.internal.core.LaunchManager$LaunchesNotifier.run(LaunchManager.java:300)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:47)
+	at org.eclipse.debug.internal.core.LaunchManager$LaunchesNotifier.notify(LaunchManager.java:257)
+	at org.eclipse.debug.internal.core.LaunchManager.fireUpdate(LaunchManager.java:931)
+	at org.eclipse.debug.core.Launch.fireTerminate(Launch.java:479)
+	at org.eclipse.debug.core.Launch.handleDebugEvents(Launch.java:644)
+	at org.eclipse.debug.core.DebugPlugin$EventNotifier.run(DebugPlugin.java:1263)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:47)
+	at org.eclipse.debug.core.DebugPlugin$EventNotifier.dispatch(DebugPlugin.java:1297)
+	at org.eclipse.debug.core.DebugPlugin$EventDispatchJob.run(DebugPlugin.java:498)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+Caused by: org.apache.commons.io.IOIndexedException: IOException #0: Cannot delete file: C:\AnypointStudio\AnypointStudio\plugins\org.mule.tooling.server.4.11.ee_7.24.0.202602021436\mule\apps\experience
+	at org.apache.commons.io.function.IOStream.lambda$forAll$11(IOStream.java:352)
+	at java.base/java.util.Spliterators$ArraySpliterator.forEachRemaining(Spliterators.java:992)
+	at java.base/java.util.stream.ReferencePipeline$Head.forEach(ReferencePipeline.java:762)
+	at org.apache.commons.io.function.IOStream.forAll(IOStream.java:343)
+	... 18 more
+Caused by: java.io.IOException: Cannot delete file: C:\AnypointStudio\AnypointStudio\plugins\org.mule.tooling.server.4.11.ee_7.24.0.202602021436\mule\apps\experience
+	at org.apache.commons.io.FileUtils.forceDelete(FileUtils.java:1428)
+	at org.apache.commons.io.FileUtils.lambda$cleanDirectory$0(FileUtils.java:381)
+	at org.apache.commons.io.function.IOStream.lambda$forAll$11(IOStream.java:345)
+	... 21 more
+Caused by: java.nio.file.AccessDeniedException: C:\AnypointStudio\AnypointStudio\plugins\org.mule.tooling.server.4.11.ee_7.24.0.202602021436\mule\apps\experience\repository\com\googlecode\libphonenumber\libphonenumber\8.0.0\libphonenumber-8.0.0.jar
+	at java.base/sun.nio.fs.WindowsException.translateToIOException(WindowsException.java:89)
+	at java.base/sun.nio.fs.WindowsException.rethrowAsIOException(WindowsException.java:103)
+	at java.base/sun.nio.fs.WindowsException.rethrowAsIOException(WindowsException.java:108)
+	at java.base/sun.nio.fs.WindowsFileSystemProvider.implDelete(WindowsFileSystemProvider.java:275)
+	at java.base/sun.nio.fs.AbstractFileSystemProvider.deleteIfExists(AbstractFileSystemProvider.java:110)
+	at java.base/java.nio.file.Files.deleteIfExists(Files.java:1191)
+	at org.apache.commons.io.file.DeletingPathVisitor.visitFile(DeletingPathVisitor.java:158)
+	at org.apache.commons.io.file.DeletingPathVisitor.visitFile(DeletingPathVisitor.java:37)
+	at java.base/java.nio.file.Files.walkFileTree(Files.java:2811)
+	at java.base/java.nio.file.Files.walkFileTree(Files.java:2882)
+	at org.apache.commons.io.file.PathUtils.visitFileTree(PathUtils.java:1845)
+	at org.apache.commons.io.file.PathUtils.deleteDirectory(PathUtils.java:597)
+	at org.apache.commons.io.file.PathUtils.delete(PathUtils.java:556)
+	at org.apache.commons.io.FileUtils.forceDelete(FileUtils.java:1421)
+	... 23 more
+
+!ENTRY org.mule.tooling.maven 1 0 2026-02-25 16:40:38.615
+!MESSAGE  *** 32502 EmbeddedMavenRunner [configuration=MavenPreferences [isDontWarnAgainIfNoInstallationFoundChecked()=false, isGlobalMavenSupportEnabled()=true, getMavenInstallationHome()=C:\maven, getMavenOpts()=, getDefaultGroupId()=com.mycompany, getBaseCommandline()=mvn clean package -nsu -DskipMunitTests, isDisplayRuntimeVersionWarning()=true, isExternalInstallation()=false]]
+
+!ENTRY org.mule.tooling.maven 1 0 2026-02-25 16:40:48.040
+!MESSAGE  *** 9385 EmbeddedMavenRunner [configuration=MavenPreferences [isDontWarnAgainIfNoInstallationFoundChecked()=false, isGlobalMavenSupportEnabled()=true, getMavenInstallationHome()=C:\maven, getMavenOpts()=, getDefaultGroupId()=com.mycompany, getBaseCommandline()=mvn clean package -nsu -DskipMunitTests, isDisplayRuntimeVersionWarning()=true, isExternalInstallation()=false]]
+
+!ENTRY org.mule.tooling.maven 1 0 2026-02-25 16:40:58.164
+!MESSAGE  *** 10084 EmbeddedMavenRunner [configuration=MavenPreferences [isDontWarnAgainIfNoInstallationFoundChecked()=false, isGlobalMavenSupportEnabled()=true, getMavenInstallationHome()=C:\maven, getMavenOpts()=, getDefaultGroupId()=com.mycompany, getBaseCommandline()=mvn clean package -nsu -DskipMunitTests, isDisplayRuntimeVersionWarning()=true, isExternalInstallation()=false]]
+
+!ENTRY org.mule.tooling.runtime 1 0 2026-02-25 17:02:47.071
+!MESSAGE Starting shell termination command "[taskkill, /F, /PID, 15176]"
+
+!ENTRY org.mule.tooling.runtime 1 0 2026-02-25 17:02:47.159
+!MESSAGE Finished shell termination command "[taskkill, /F, /PID, 15176]"
+
+!ENTRY org.mule.tooling.runtime 2 0 2026-02-25 17:02:47.692
+!MESSAGE Termination command ShellTerminationCommand [getTerminationCommand()=[taskkill, /F, /PID, 15176]] indicate retry action is necessary, moving on to next one
+
+!ENTRY org.mule.tooling.runtime 1 0 2026-02-25 17:02:47.707
+!MESSAGE Starting shell termination command "[taskkill, /F, /PID, 34084]"
+
+!ENTRY org.mule.tooling.runtime 1 0 2026-02-25 17:02:47.776
+!MESSAGE Finished shell termination command "[taskkill, /F, /PID, 34084]"
+
+!ENTRY org.mule.tooling.runtime 2 0 2026-02-25 17:02:48.246
+!MESSAGE Termination command ShellTerminationCommand [getTerminationCommand()=[taskkill, /F, /PID, 34084]] indicate retry action is necessary, moving on to next one
+
+!ENTRY org.mule.tooling.core 4 0 2026-02-25 17:02:52.019
+!MESSAGE Could not terminate launch system
+!STACK 0
+java.lang.RuntimeException: Could not terminate launch system
+	at org.mule.tooling.runtime.launch.MuleRuntimeProcessLaunchDelegate.terminateLaunchSync(MuleRuntimeProcessLaunchDelegate.java:936)
+	at org.mule.tooling.runtime.launch.MuleRuntimeProcessLaunchDelegate.removeAllMuleLaunchesBut(MuleRuntimeProcessLaunchDelegate.java:894)
+	at org.mule.tooling.runtime.launch.MuleRuntimeProcessLaunchDelegate.resolveConflictingLaunches(MuleRuntimeProcessLaunchDelegate.java:830)
+	at org.mule.tooling.runtime.launch.MuleRuntimeProcessLaunchDelegate.launch(MuleRuntimeProcessLaunchDelegate.java:295)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:805)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:716)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1038)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$1.run(DebugUIPlugin.java:1241)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.mule.tooling.core 2 0 2026-02-25 17:03:00.622
+!MESSAGE Cannot delete C:\AnypointStudio\AnypointStudio\plugins\org.mule.tooling.server.4.11.ee_7.24.0.202602021436\mule\apps
+!STACK 0
+org.apache.commons.io.IOExceptionList: 3 exception(s): [org.apache.commons.io.IOIndexedException: IOException #1: Cannot delete file: C:\AnypointStudio\AnypointStudio\plugins\org.mule.tooling.server.4.11.ee_7.24.0.202602021436\mule\apps\experience-anchor.txt, org.apache.commons.io.IOIndexedException: IOException #2: Cannot delete file: C:\AnypointStudio\AnypointStudio\plugins\org.mule.tooling.server.4.11.ee_7.24.0.202602021436\mule\apps\process, org.apache.commons.io.IOIndexedException: IOException #5: Cannot delete file: C:\AnypointStudio\AnypointStudio\plugins\org.mule.tooling.server.4.11.ee_7.24.0.202602021436\mule\apps\system-anchor.txt]
+	at org.apache.commons.io.IOExceptionList.checkEmpty(IOExceptionList.java:50)
+	at org.apache.commons.io.function.IOStream.forAll(IOStream.java:357)
+	at org.apache.commons.io.function.IOStreams.forAll(IOStreams.java:42)
+	at org.apache.commons.io.function.IOStreams.forAll(IOStreams.java:36)
+	at org.apache.commons.io.function.IOConsumer.forAll(IOConsumer.java:82)
+	at org.apache.commons.io.FileUtils.cleanDirectory(FileUtils.java:381)
+	at org.mule.tooling.core.io.MuleResourceUtils.cleanDirectory(MuleResourceUtils.java:991)
+	at org.mule.tooling.runtime.controller.MuleController.stop(MuleController.java:241)
+	at org.mule.tooling.runtime.launch.MuleRuntimeProcessLaunchDelegate.launchesTerminated(MuleRuntimeProcessLaunchDelegate.java:1080)
+	at org.eclipse.debug.internal.core.LaunchManager$LaunchesNotifier.run(LaunchManager.java:300)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:47)
+	at org.eclipse.debug.internal.core.LaunchManager$LaunchesNotifier.notify(LaunchManager.java:257)
+	at org.eclipse.debug.internal.core.LaunchManager.fireUpdate(LaunchManager.java:931)
+	at org.eclipse.debug.core.Launch.fireTerminate(Launch.java:479)
+	at org.eclipse.debug.core.Launch.handleDebugEvents(Launch.java:644)
+	at org.eclipse.debug.core.DebugPlugin$EventNotifier.run(DebugPlugin.java:1263)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:47)
+	at org.eclipse.debug.core.DebugPlugin$EventNotifier.dispatch(DebugPlugin.java:1297)
+	at org.eclipse.debug.core.DebugPlugin$EventDispatchJob.run(DebugPlugin.java:498)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+Caused by: org.apache.commons.io.IOIndexedException: IOException #1: Cannot delete file: C:\AnypointStudio\AnypointStudio\plugins\org.mule.tooling.server.4.11.ee_7.24.0.202602021436\mule\apps\experience-anchor.txt
+	at org.apache.commons.io.function.IOStream.lambda$forAll$11(IOStream.java:352)
+	at java.base/java.util.Spliterators$ArraySpliterator.forEachRemaining(Spliterators.java:992)
+	at java.base/java.util.stream.ReferencePipeline$Head.forEach(ReferencePipeline.java:762)
+	at org.apache.commons.io.function.IOStream.forAll(IOStream.java:343)
+	... 18 more
+Caused by: java.io.IOException: Cannot delete file: C:\AnypointStudio\AnypointStudio\plugins\org.mule.tooling.server.4.11.ee_7.24.0.202602021436\mule\apps\experience-anchor.txt
+	at org.apache.commons.io.FileUtils.forceDelete(FileUtils.java:1428)
+	at org.apache.commons.io.FileUtils.lambda$cleanDirectory$0(FileUtils.java:381)
+	at org.apache.commons.io.function.IOStream.lambda$forAll$11(IOStream.java:345)
+	... 21 more
+Caused by: java.io.IOException: DOS or POSIX file operations not available for 'C:\AnypointStudio\AnypointStudio\plugins\org.mule.tooling.server.4.11.ee_7.24.0.202602021436\mule\apps\experience-anchor.txt', linkOptions []
+	at org.apache.commons.io.file.PathUtils.setReadOnly(PathUtils.java:1702)
+	at org.apache.commons.io.file.PathUtils.deleteFile(PathUtils.java:663)
+	at org.apache.commons.io.file.PathUtils.delete(PathUtils.java:556)
+	at org.apache.commons.io.FileUtils.forceDelete(FileUtils.java:1421)
+	... 23 more
+
+!ENTRY org.mule.tooling.maven 1 0 2026-02-25 17:04:58.854
+!MESSAGE  *** 120470 EmbeddedMavenRunner [configuration=MavenPreferences [isDontWarnAgainIfNoInstallationFoundChecked()=false, isGlobalMavenSupportEnabled()=true, getMavenInstallationHome()=C:\maven, getMavenOpts()=, getDefaultGroupId()=com.mycompany, getBaseCommandline()=mvn clean package -nsu -DskipMunitTests, isDisplayRuntimeVersionWarning()=true, isExternalInstallation()=false]]
+
+!ENTRY org.mule.tooling.maven 1 0 2026-02-25 17:05:11.578
+!MESSAGE  *** 12667 EmbeddedMavenRunner [configuration=MavenPreferences [isDontWarnAgainIfNoInstallationFoundChecked()=false, isGlobalMavenSupportEnabled()=true, getMavenInstallationHome()=C:\maven, getMavenOpts()=, getDefaultGroupId()=com.mycompany, getBaseCommandline()=mvn clean package -nsu -DskipMunitTests, isDisplayRuntimeVersionWarning()=true, isExternalInstallation()=false]]
+
+!ENTRY org.mule.tooling.maven 1 0 2026-02-25 17:05:25.158
+!MESSAGE  *** 13534 EmbeddedMavenRunner [configuration=MavenPreferences [isDontWarnAgainIfNoInstallationFoundChecked()=false, isGlobalMavenSupportEnabled()=true, getMavenInstallationHome()=C:\maven, getMavenOpts()=, getDefaultGroupId()=com.mycompany, getBaseCommandline()=mvn clean package -nsu -DskipMunitTests, isDisplayRuntimeVersionWarning()=true, isExternalInstallation()=false]]
+
+!ENTRY org.mule.tooling.core 4 0 2026-02-25 17:19:49.985
+!MESSAGE There was a problem updating the cached tooling project for [Mule Project] Name: experience - Domain: default. Removing from cache.
+!STACK 1
+org.eclipse.core.runtime.CoreException: There was an error retrieving the current XML configuration for performing a DataSense operation
+	at org.mule.tooling.runtime.tooling.ToolingProjectFile.getCurrentXmlContents(ToolingProjectFile.java:172)
+	at org.mule.tooling.runtime.tooling.ToolingProjectFile.create(ToolingProjectFile.java:55)
+	at org.mule.tooling.runtime.tooling.ToolingProject.initializeProjectFile(ToolingProject.java:93)
+	at org.mule.tooling.runtime.tooling.ToolingProject.updateOpenFiles(ToolingProject.java:111)
+	at org.mule.tooling.runtime.tooling.ToolingProject.<init>(ToolingProject.java:65)
+	at org.mule.tooling.runtime.tooling.ToolingProject.<init>(ToolingProject.java:56)
+	at org.mule.tooling.runtime.tooling.ToolingWorkspace.updateConfigFile(ToolingWorkspace.java:368)
+	at org.mule.tooling.runtime.tooling.ToolingWorkspace.lambda$9(ToolingWorkspace.java:227)
+	at org.mule.tooling.runtime.tooling.ToolingProjectsCache.runWithToolingArtifactIfPresent(ToolingProjectsCache.java:77)
+	at org.mule.tooling.runtime.tooling.ToolingWorkspace.updateCachedProject(ToolingWorkspace.java:198)
+	at org.mule.tooling.runtime.tooling.ToolingWorkspace.lambda$8(ToolingWorkspace.java:189)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:840)
+Caused by: java.lang.NullPointerException: Cannot invoke "org.eclipse.core.resources.IFile.isAccessible()" because "muleConfigurationFile" is null
+	at org.mule.tooling.runtime.tooling.ToolingProjectFile.getCurrentXmlContents(ToolingProjectFile.java:163)
+	... 13 more
+!SUBENTRY 1 org.mule.tooling.runtime 4 0 2026-02-25 17:19:50.014
+!MESSAGE There was an error retrieving the current XML configuration for performing a DataSense operation
+!STACK 0
+java.lang.NullPointerException: Cannot invoke "org.eclipse.core.resources.IFile.isAccessible()" because "muleConfigurationFile" is null
+	at org.mule.tooling.runtime.tooling.ToolingProjectFile.getCurrentXmlContents(ToolingProjectFile.java:163)
+	at org.mule.tooling.runtime.tooling.ToolingProjectFile.create(ToolingProjectFile.java:55)
+	at org.mule.tooling.runtime.tooling.ToolingProject.initializeProjectFile(ToolingProject.java:93)
+	at org.mule.tooling.runtime.tooling.ToolingProject.updateOpenFiles(ToolingProject.java:111)
+	at org.mule.tooling.runtime.tooling.ToolingProject.<init>(ToolingProject.java:65)
+	at org.mule.tooling.runtime.tooling.ToolingProject.<init>(ToolingProject.java:56)
+	at org.mule.tooling.runtime.tooling.ToolingWorkspace.updateConfigFile(ToolingWorkspace.java:368)
+	at org.mule.tooling.runtime.tooling.ToolingWorkspace.lambda$9(ToolingWorkspace.java:227)
+	at org.mule.tooling.runtime.tooling.ToolingProjectsCache.runWithToolingArtifactIfPresent(ToolingProjectsCache.java:77)
+	at org.mule.tooling.runtime.tooling.ToolingWorkspace.updateCachedProject(ToolingWorkspace.java:198)
+	at org.mule.tooling.runtime.tooling.ToolingWorkspace.lambda$8(ToolingWorkspace.java:189)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:840)
+
+!ENTRY org.mule.tooling.runtime 1 0 2026-02-25 17:20:12.120
+!MESSAGE Starting shell termination command "[taskkill, /F, /PID, 35100]"
+
+!ENTRY org.mule.tooling.runtime 1 0 2026-02-25 17:20:12.159
+!MESSAGE Finished shell termination command "[taskkill, /F, /PID, 35100]"
+
+!ENTRY org.mule.tooling.runtime 2 0 2026-02-25 17:20:12.514
+!MESSAGE Termination command ShellTerminationCommand [getTerminationCommand()=[taskkill, /F, /PID, 35100]] indicate retry action is necessary, moving on to next one
+
+!ENTRY org.mule.tooling.runtime 1 0 2026-02-25 17:20:12.515
+!MESSAGE Starting shell termination command "[taskkill, /F, /PID, 33492]"
+
+!ENTRY org.mule.tooling.runtime 1 0 2026-02-25 17:20:12.549
+!MESSAGE Finished shell termination command "[taskkill, /F, /PID, 33492]"
+
+!ENTRY org.mule.tooling.runtime 2 0 2026-02-25 17:20:12.899
+!MESSAGE Termination command ShellTerminationCommand [getTerminationCommand()=[taskkill, /F, /PID, 33492]] indicate retry action is necessary, moving on to next one
+
+!ENTRY org.mule.tooling.maven 1 0 2026-02-25 17:31:30.876
+!MESSAGE  *** 7112 EmbeddedMavenRunner [configuration=MavenPreferences [isDontWarnAgainIfNoInstallationFoundChecked()=false, isGlobalMavenSupportEnabled()=true, getMavenInstallationHome()=C:\maven, getMavenOpts()=, getDefaultGroupId()=com.mycompany, getBaseCommandline()=mvn clean package -nsu -DskipMunitTests, isDisplayRuntimeVersionWarning()=true, isExternalInstallation()=false]]
+
+!ENTRY org.mule.tooling.maven 1 0 2026-02-25 17:31:36.332
+!MESSAGE  *** 5421 EmbeddedMavenRunner [configuration=MavenPreferences [isDontWarnAgainIfNoInstallationFoundChecked()=false, isGlobalMavenSupportEnabled()=true, getMavenInstallationHome()=C:\maven, getMavenOpts()=, getDefaultGroupId()=com.mycompany, getBaseCommandline()=mvn clean package -nsu -DskipMunitTests, isDisplayRuntimeVersionWarning()=true, isExternalInstallation()=false]]
+
+!ENTRY org.mule.tooling.maven.ui 4 0 2026-02-25 17:31:36.335
+!MESSAGE There was an error running build on project process
+
+!ENTRY org.mule.tooling.core 4 0 2026-02-25 17:31:36.336
+!MESSAGE Unable to find result application jar file
+!STACK 0
+java.lang.RuntimeException
+	at org.mule.tooling.maven.ui.launch.MavenDeploymentStrategy.deployToEmbeddedInstance(MavenDeploymentStrategy.java:115)
+	at org.mule.tooling.runtime.launch.MuleRuntimeProcessLaunchDelegate.deployProjects(MuleRuntimeProcessLaunchDelegate.java:769)
+	at org.mule.tooling.runtime.launch.MuleRuntimeProcessLaunchDelegate.performLegacyDeployment(MuleRuntimeProcessLaunchDelegate.java:417)
+	at org.mule.tooling.runtime.launch.MuleRuntimeProcessLaunchDelegate.launch(MuleRuntimeProcessLaunchDelegate.java:298)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:805)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:716)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1038)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$1.run(DebugUIPlugin.java:1241)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.mule.tooling.maven 1 0 2026-02-25 17:31:45.908
+!MESSAGE  *** 9567 EmbeddedMavenRunner [configuration=MavenPreferences [isDontWarnAgainIfNoInstallationFoundChecked()=false, isGlobalMavenSupportEnabled()=true, getMavenInstallationHome()=C:\maven, getMavenOpts()=, getDefaultGroupId()=com.mycompany, getBaseCommandline()=mvn clean package -nsu -DskipMunitTests, isDisplayRuntimeVersionWarning()=true, isExternalInstallation()=false]]
+
+!ENTRY org.mule.tooling.maven 1 0 2026-02-25 17:49:53.348
+!MESSAGE  *** 8474 EmbeddedMavenRunner [configuration=MavenPreferences [isDontWarnAgainIfNoInstallationFoundChecked()=false, isGlobalMavenSupportEnabled()=true, getMavenInstallationHome()=C:\maven, getMavenOpts()=, getDefaultGroupId()=com.mycompany, getBaseCommandline()=mvn clean package -nsu -DskipMunitTests, isDisplayRuntimeVersionWarning()=true, isExternalInstallation()=false]]
+
+!ENTRY org.mule.tooling.maven 1 0 2026-02-25 17:50:09.139
+!MESSAGE  *** 15758 EmbeddedMavenRunner [configuration=MavenPreferences [isDontWarnAgainIfNoInstallationFoundChecked()=false, isGlobalMavenSupportEnabled()=true, getMavenInstallationHome()=C:\maven, getMavenOpts()=, getDefaultGroupId()=com.mycompany, getBaseCommandline()=mvn clean package -nsu -DskipMunitTests, isDisplayRuntimeVersionWarning()=true, isExternalInstallation()=false]]
+
+!ENTRY org.mule.tooling.maven 1 0 2026-02-25 17:50:17.724
+!MESSAGE  *** 8542 EmbeddedMavenRunner [configuration=MavenPreferences [isDontWarnAgainIfNoInstallationFoundChecked()=false, isGlobalMavenSupportEnabled()=true, getMavenInstallationHome()=C:\maven, getMavenOpts()=, getDefaultGroupId()=com.mycompany, getBaseCommandline()=mvn clean package -nsu -DskipMunitTests, isDisplayRuntimeVersionWarning()=true, isExternalInstallation()=false]]
+
+!ENTRY org.mule.tooling.ui.contribution.munit 1 1 2026-02-25 17:52:52.129
+!MESSAGE Deleting MUnit temporary folder in C:\Users\RMUNOZ~1\AppData\Local\Temp\munit-temp-dir
