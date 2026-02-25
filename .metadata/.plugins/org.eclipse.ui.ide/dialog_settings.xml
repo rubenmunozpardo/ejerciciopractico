@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<list key="installedFeatures">
+		<item value="org.eclipse.draw2d:3.19.0.202402212051"/>
+		<item value="org.eclipse.egit:7.3.0.202506031305-r"/>
+		<item value="org.eclipse.emf.common:2.31.0.v20231210-0956"/>
+		<item value="org.eclipse.emf.ecore:2.37.0.v20240203-0859"/>
+		<item value="org.eclipse.gef:3.19.0.202402212051"/>
+		<item value="org.eclipse.help:2.3.1700.v20240229-0520"/>
+		<item value="org.eclipse.jdt:3.19.400.v20240229-0520"/>
+		<item value="org.eclipse.jgit.gpg.bc:7.3.0.202506031305-r"/>
+		<item value="org.eclipse.jgit.http.apache:7.3.0.202506031305-r"/>
+		<item value="org.eclipse.jgit.ssh.apache:7.3.0.202506031305-r"/>
+		<item value="org.eclipse.jgit:7.3.0.202506031305-r"/>
+		<item value="org.eclipse.platform:4.31.0.v20240229-1022"/>
+		<item value="org.eclipse.rcp:4.31.0.v20240229-0520"/>
+		<item value="org.eclipse.wst.xml_ui.feature:3.33.0.v202402030243"/>
+		<item value="org.eclipse.xsd.edit:2.15.0.v20230211-1150"/>
+		<item value="org.eclipse.xsd:2.21.0.v20231205-1420"/>
+		<item value="org.mule.apieditor:4.0.1.202601221515"/>
+		<item value="org.mule.tooling.extension.server.4.11.ee:7.24.0.202602021436"/>
+		<item value="org.mule.tooling.munit.extension:2.7.19.202602041842"/>
+		<item value="org.mule.tooling.studio:7.24.0.202602070125"/>
+		<item value="org.mule.tooling:7.24.0.202602070125"/>
+	</list>
+	<section name="org.eclipse.ui.dialogs.FilteredResourcesSelectionDialog">
+		<item key="ShowStatusLine" value="true"/>
+		<item key="History" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&#x0D;&#x0A;&lt;History&gt;&#x0D;&#x0A;&lt;historyRootNode&gt;&#x0D;&#x0A;&lt;infoNode path=&quot;/experience/src/main/resources/experience.yaml&quot; type=&quot;1&quot;/&gt;&#x0D;&#x0A;&lt;/historyRootNode&gt;&#x0D;&#x0A;&lt;/History&gt;"/>
+		<item key="ShowDerived" value="false"/>
+		<item key="FilterByLocation" value="false"/>
+		<item key="WorkingSet" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&#x0D;&#x0A;&lt;workingSet workingSetName=&quot;&quot;/&gt;"/>
+		<section name="DialogBoundsSettings">
+			<item key="DIALOG_HEIGHT" value="500"/>
+			<item key="DIALOG_WIDTH" value="600"/>
+			<item key="DIALOG_X_ORIGIN" value="12"/>
+			<item key="DIALOG_Y_ORIGIN" value="-21"/>
+			<item key="DIALOG_FONT_NAME" value="1|Segoe UI|9.0|0|WINDOWS|1|-15|0|0|0|400|0|0|0|1|0|0|0|0|Segoe UI"/>
+		</section>
+	</section>
+</section>

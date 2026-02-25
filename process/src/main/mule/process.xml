@@ -6,13 +6,13 @@
     <apikit:config name="p-test-rmunozpardo-config" api="resource::91b7f36d-45ab-4b9f-be63-662e83632310:p-test-rmunozpardo:1.0.0:raml:zip:p-test-rmunozpardo.raml" outboundHeadersMapName="outboundHeaders" httpStatusVarName="httpStatus" />
     <configuration-properties doc:name="Configuration properties" doc:id="7f7c8939-584a-45e9-b5ca-d41d2ee06950" file="process.yaml" />
 	<flow name="p-test-rmunozpardo-main">
-        <http:listener config-ref="p-test-rmunozpardo-httpListenerConfig" path="/api/*">
+        <http:listener config-ref="p-test-rmunozpardo-httpListenerConfig" path="/pro/*">
             <http:response statusCode="#[vars.httpStatus default 200]">
-                <http:headers>#[vars.outboundHeaders default {}]</http:headers>
+                <http:headers><![CDATA[#[vars.outboundHeaders default {}]]]></http:headers>
             </http:response>
             <http:error-response statusCode="#[vars.httpStatus default 500]">
-                <http:body>#[payload]</http:body>
-                <http:headers>#[vars.outboundHeaders default {}]</http:headers>
+                <http:body><![CDATA[#[payload]]]></http:body>
+                <http:headers><![CDATA[#[vars.outboundHeaders default {}]]]></http:headers>
             </http:error-response>
         </http:listener>
         <apikit:router config-ref="p-test-rmunozpardo-config" />
