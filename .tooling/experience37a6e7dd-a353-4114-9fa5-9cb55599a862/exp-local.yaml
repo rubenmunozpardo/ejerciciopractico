@@ -1,0 +1,13 @@
+api.port: "8080"
+
+# Experience → Process
+process.api.host: "localhost"
+process.api.port: "8080"
+process.api.protocol: "HTTP"
+
+# Experience → System (optional)
+system.api.host: "localhost"
+system.api.port: "8080"
+system.api.protocol: "HTTP"
+
+api.id: "00000000"

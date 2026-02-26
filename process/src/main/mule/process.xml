@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<mule xmlns="http://www.mulesoft.org/schema/mule/core"
+<mule xmlns:api-gateway="http://www.mulesoft.org/schema/mule/api-gateway"
+      xmlns="http://www.mulesoft.org/schema/mule/core"
       xmlns:apikit="http://www.mulesoft.org/schema/mule/mule-apikit"
       xmlns:doc="http://www.mulesoft.org/schema/mule/documentation"
       xmlns:ee="http://www.mulesoft.org/schema/mule/ee/core"
@@ -9,141 +10,153 @@
         http://www.mulesoft.org/schema/mule/core http://www.mulesoft.org/schema/mule/core/current/mule.xsd
         http://www.mulesoft.org/schema/mule/http http://www.mulesoft.org/schema/mule/http/current/mule-http.xsd
         http://www.mulesoft.org/schema/mule/mule-apikit http://www.mulesoft.org/schema/mule/mule-apikit/current/mule-apikit.xsd
-        http://www.mulesoft.org/schema/mule/ee/core http://www.mulesoft.org/schema/mule/ee/core/current/mule-ee.xsd">
+        http://www.mulesoft.org/schema/mule/ee/core http://www.mulesoft.org/schema/mule/ee/core/current/mule-ee.xsd
+        http://www.mulesoft.org/schema/mule/api-gateway http://www.mulesoft.org/schema/mule/api-gateway/current/mule-api-gateway.xsd">
 
-  <!-- 1) PROPERTIES -->
-  <configuration-properties file="process.yaml"/>
+    <!-- 1) Load properties first -->
+       <configuration-properties file="pro-local.yaml"/>
+    <configuration-properties file="process.properties"/>
 
-  <!-- 2) LISTENER CONFIG (GLOBAL) -->
-  <http:listener-config name="p-test-rmunozpardo-httpListenerConfig">
-    <http:listener-connection host="0.0.0.0" port="${api.port}"/>
-  </http:listener-config>
 
-  <!-- 3) REQUEST CONFIG → llamar a SYSTEM -->
-  <http:request-config name="system-request-config">
-    <http:request-connection host="#[p('system-api.baseURL').replace('https://','')]"
-                             protocol="HTTPS" port="443"/>
-  </http:request-config>
+    <!-- LISTENER CONFIG (GLOBAL) -->
+    <http:listener-config name="p-test-rmunozpardo-httpListenerConfig">
+        <http:listener-connection host="0.0.0.0" port="${api.port}"/>
+    </http:listener-config>
 
-  <!-- 4) APIKIT CONFIG -->
-  <apikit:config name="p-test-rmunozpardo-config"
-                 api="resource::91b7f36d-45ab-4b9f-be63-662e83632310:p-test-rmunozpardo:1.0.0:raml:zip:p-test-rmunozpardo.raml"
-                 outboundHeadersMapName="outboundHeaders"
-                 httpStatusVarName="httpStatus"/>
+    <http:request-config name="process-request-config">
+        <http:request-connection
+            host="${process.api.host}"
+            port="${process.api.port}"/>
+    </http:request-config>
 
-  <!-- 5) MAIN ROUTER FLOW -->
-  <flow name="p-test-rmunozpardo-main">
-    <!-- Usar el config GLOBAL -->
-    <http:listener config-ref="p-test-rmunozpardo-httpListenerConfig" path="/pro/*"/>
-    <apikit:router config-ref="p-test-rmunozpardo-config"/>
+    <!-- APIKIT CONFIG -->
+    <apikit:config name="p-test-rmunozpardo-config"
+                   api="resource::91b7f36d-45ab-4b9f-be63-662e83632310:p-test-rmunozpardo:1.0.0:raml:zip:p-test-rmunozpardo.raml"
+                   outboundHeadersMapName="outboundHeaders"
+                   httpStatusVarName="httpStatus"/>
 
-    <!-- Error handler uniforme -->
-    <error-handler>
-      <on-error-propagate type="APIKIT:BAD_REQUEST">
-        <ee:transform>
-          <ee:message>
-            <ee:set-payload><![CDATA[
+    <!-- MAIN ROUTER FLOW -->
+    <api-gateway:autodiscovery
+        apiId="20754420"
+        ignoreBasePath="true"
+        doc:name="API Autodiscovery"
+        doc:id="782e796d-b47e-40b3-a279-71fe6582ea7f"
+        flowRef="p-test-rmunozpardo-main"/>
+
+    <flow name="p-test-rmunozpardo-main">
+        <!-- Usar el config GLOBAL -->
+        <http:listener config-ref="p-test-rmunozpardo-httpListenerConfig" path="/pro/*"/>
+        <apikit:router config-ref="p-test-rmunozpardo-config"/>
+
+        <!-- Error handler uniforme -->
+        <error-handler>
+            <on-error-propagate type="APIKIT:BAD_REQUEST">
+                <ee:transform>
+                    <ee:message>
+                        <ee:set-payload><![CDATA[
 %dw 2.0
 output application/json
 ---
 { message: "Bad request" }]]></ee:set-payload>
-          </ee:message>
-          <ee:variables>
-            <ee:set-variable variableName="httpStatus">400</ee:set-variable>
-          </ee:variables>
-        </ee:transform>
-      </on-error-propagate>
+                    </ee:message>
+                    <ee:variables>
+                        <ee:set-variable variableName="httpStatus">400</ee:set-variable>
+                    </ee:variables>
+                </ee:transform>
+            </on-error-propagate>
 
-      <on-error-propagate type="APIKIT:NOT_FOUND">
-        <ee:transform>
-          <ee:message>
-            <ee:set-payload><![CDATA[
+            <on-error-propagate type="APIKIT:NOT_FOUND">
+                <ee:transform>
+                    <ee:message>
+                        <ee:set-payload><![CDATA[
 %dw 2.0
 output application/json
 ---
 { message: "Resource not found" }]]></ee:set-payload>
-          </ee:message>
-          <ee:variables>
-            <ee:set-variable variableName="httpStatus">404</ee:set-variable>
-          </ee:variables>
-        </ee:transform>
-      </on-error-propagate>
+                    </ee:message>
+                    <ee:variables>
+                        <ee:set-variable variableName="httpStatus">404</ee:set-variable>
+                    </ee:variables>
+                </ee:transform>
+            </on-error-propagate>
 
-      <on-error-propagate type="APIKIT:METHOD_NOT_ALLOWED">
-        <ee:transform>
-          <ee:message>
-            <ee:set-payload><![CDATA[
+            <on-error-propagate type="APIKIT:METHOD_NOT_ALLOWED">
+                <ee:transform>
+                    <ee:message>
+                        <ee:set-payload><![CDATA[
 %dw 2.0
 output application/json
 ---
 { message: "Method not allowed" }]]></ee:set-payload>
-          </ee:message>
-          <ee:variables>
-            <ee:set-variable variableName="httpStatus">405</ee:set-variable>
-          </ee:variables>
-        </ee:transform>
-      </on-error-propagate>
+                    </ee:message>
+                    <ee:variables>
+                        <ee:set-variable variableName="httpStatus">405</ee:set-variable>
+                    </ee:variables>
+                </ee:transform>
+            </on-error-propagate>
 
-      <on-error-propagate type="APIKIT:NOT_ACCEPTABLE">
-        <ee:transform>
-          <ee:message>
-            <ee:set-payload><![CDATA[
+            <on-error-propagate type="APIKIT:NOT_ACCEPTABLE">
+                <ee:transform>
+                    <ee:message>
+                        <ee:set-payload><![CDATA[
 %dw 2.0
 output application/json
 ---
 { message: "Not acceptable" }]]></ee:set-payload>
-          </ee:message>
-          <ee:variables>
-            <ee:set-variable variableName="httpStatus">406</ee:set-variable>
-          </ee:variables>
-        </ee:transform>
-      </on-error-propagate>
+                    </ee:message>
+                    <ee:variables>
+                        <ee:set-variable variableName="httpStatus">406</ee:set-variable>
+                    </ee:variables>
+                </ee:transform>
+            </on-error-propagate>
 
-      <on-error-propagate type="APIKIT:UNSUPPORTED_MEDIA_TYPE">
-        <ee:transform>
-          <ee:message>
-            <ee:set-payload><![CDATA[
+            <on-error-propagate type="APIKIT:UNSUPPORTED_MEDIA_TYPE">
+                <ee:transform>
+                    <ee:message>
+                        <ee:set-payload><![CDATA[
 %dw 2.0
 output application/json
 ---
 { message: "Unsupported media type" }]]></ee:set-payload>
-          </ee:message>
-          <ee:variables>
-            <ee:set-variable variableName="httpStatus">415</ee:set-variable>
-          </ee:variables>
-        </ee:transform>
-      </on-error-propagate>
+                    </ee:message>
+                    <ee:variables>
+                        <ee:set-variable variableName="httpStatus">415</ee:set-variable>
+                    </ee:variables>
+                </ee:transform>
+            </on-error-propagate>
 
-      <on-error-propagate type="APIKIT:NOT_IMPLEMENTED">
-        <ee:transform>
-          <ee:message>
-            <ee:set-payload><![CDATA[
+            <on-error-propagate type="APIKIT:NOT_IMPLEMENTED">
+                <ee:transform>
+                    <ee:message>
+                        <ee:set-payload><![CDATA[
 %dw 2.0
 output application/json
 ---
 { message: "Not implemented" }]]></ee:set-payload>
-          </ee:message>
-          <ee:variables>
-            <ee:set-variable variableName="httpStatus">501</ee:set-variable>
-          </ee:variables>
-        </ee:transform>
-      </on-error-propagate>
-    </error-handler>
-  </flow>
+                    </ee:message>
+                    <ee:variables>
+                        <ee:set-variable variableName="httpStatus">501</ee:set-variable>
+                    </ee:variables>
+                </ee:transform>
+            </on-error-propagate>
+        </error-handler>
+    </flow>
 
-  <!-- 6) GET /accounts (Process → llama a System) -->
-  <flow name="get:\accounts:p-test-rmunozpardo-config">
-    <!-- Llamada a System API -->
-    <http:request config-ref="system-request-config"
-                  method="GET" path="/sys/accounts" doc:name="Call System API"/>
-    <ee:transform>
-      <ee:message>
-        <ee:set-payload><![CDATA[%dw 2.0
+    <!-- GET /accounts (Process → llama a System) -->
+	<flow name="get-accounts-p-test-rmunozpardo-config">        <!-- Llamada a System API -->
+        <http:request
+            config-ref="process-request-config"
+            path="/pro/*"
+            doc:name="Call System API"/>
+        <ee:transform>
+            <ee:message>
+                <ee:set-payload><![CDATA[%dw 2.0
 output application/json
 ---
 payload
-        ]]></ee:set-payload>
-      </ee:message>
-    </ee:transform>
-  </flow>
+                ]]></ee:set-payload>
+            </ee:message>
+        </ee:transform>
+    </flow>
+
 </mule>

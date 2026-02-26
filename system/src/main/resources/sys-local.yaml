@@ -1,0 +1,6 @@
+# System API (LOCAL)
+api.port: "8080"
+api.id: "00000000"
+
+# System → (otros servicios locales si aplica)
+# No outbound calls provided for LOCAL, so none are included.

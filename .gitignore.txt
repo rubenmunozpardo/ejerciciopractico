@@ -1,9 +1,0 @@
-
-# MuleSoft / Java build
-target/
-.mule/
-.classpath
-.project
-.settings/
-logs/
-*.log

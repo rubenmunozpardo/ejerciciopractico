@@ -1,2 +1,3 @@
 eclipse.preferences.version=1
+org.mule.tooling.amc.apps={"userProjectMap"\:{"rmunozpardo"\:{"experience"\:"{\\"applicationName\\"\:\\"experience\\",\\"muleRuntime\\"\:\\"4.11.1\:2e-java17\\",\\"properties\\"\:{},\\"deploymentId\\"\:\\"2a9cfdd0-7daf-4550-97ac-5bc415bf0f57\\"}","process"\:"{\\"applicationName\\"\:\\"process\\",\\"muleRuntime\\"\:\\"4.11.1\:2e-java17\\",\\"properties\\"\:{},\\"deploymentId\\"\:\\"17b5ad12-0a5b-4a20-ad68-969ac03f8114\\"}","system"\:"{\\"applicationName\\"\:\\"system\\",\\"muleRuntime\\"\:\\"4.11.1\:2e-java17\\",\\"properties\\"\:{},\\"deploymentId\\"\:\\"96a14b61-8a10-42a1-be4d-b9ff0d4f1d08\\"}"}}}
 org.mule.tooling.ui.properties.enable.api.dependencies=true

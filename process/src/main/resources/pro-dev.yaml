@@ -1,0 +1,8 @@
+# Process API (DEV – CloudHub)
+api.port: "8081"
+api.id: "20754420"
+
+# Process → System (DEV – CloudHub, HTTPS 443)
+system.api.host: "system-9c4ze4.5sc6y6-1.usa-e2.cloudhub.io"
+system.api.port: "443"
+system.api.protocol: "HTTPS"
