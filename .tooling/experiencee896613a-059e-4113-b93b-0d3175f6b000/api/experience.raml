@@ -1,0 +1,19 @@
+#%RAML 1.0
+title: <API led layer>-<>
+baseUri: /exp
+/accounts:
+  displayName: Accounts Collection
+  get:
+    description: Retrieve a list of accounts
+    responses:
+      200:
+        body:
+          application/json:
+            example: |
+              [
+              	{
+              		"id": 1,
+              		"name": "John Smith",
+              		"email": "john.smith@example.com"
+              	}
+              ]

@@ -2946,3 +2946,756 @@ java.lang.RuntimeException
 
 !ENTRY org.mule.tooling.ui.contribution.munit 1 1 2026-02-25 17:52:52.129
 !MESSAGE Deleting MUnit temporary folder in C:\Users\RMUNOZ~1\AppData\Local\Temp\munit-temp-dir
+!SESSION 2026-02-26 09:04:54.865 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=17.0.12
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_GB
+Command-line arguments:  -os win32 -ws win32 -arch x86_64
+
+!ENTRY org.eclipse.ui 2 0 2026-02-26 09:05:32.411
+!MESSAGE Warnings while parsing the key bindings from the 'org.eclipse.ui.commands' and 'org.eclipse.ui.bindings' extension point
+!SUBENTRY 1 org.eclipse.ui 2 0 2026-02-26 09:05:32.411
+!MESSAGE Cannot bind to an undefined command: plug-in='org.mule.alsp', id='org.eclipse.tm4e.languageconfiguration.togglelinecommentcommand'
+
+!ENTRY org.mule.tooling.ui.contribution.munit 1 1 2026-02-26 09:07:04.984
+!MESSAGE Creating MUnit temporary folder in C:\Users\RMUNOZ~1\AppData\Local\Temp\munit-temp-dir
+
+!ENTRY org.eclipse.egit.ui 2 0 2026-02-26 09:07:49.134
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\rmunozpardo'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-02-26 09:07:51.923
+!MESSAGE java.util.concurrent.CancellationException
+!STACK 0
+java.util.concurrent.CompletionException: java.util.concurrent.CancellationException
+	at java.base/java.util.concurrent.CompletableFuture.encodeThrowable(CompletableFuture.java:332)
+	at java.base/java.util.concurrent.CompletableFuture.completeThrowable(CompletableFuture.java:347)
+	at java.base/java.util.concurrent.CompletableFuture$UniApply.tryFire(CompletableFuture.java:636)
+	at java.base/java.util.concurrent.CompletableFuture.postComplete(CompletableFuture.java:510)
+	at java.base/java.util.concurrent.CompletableFuture.cancel(CompletableFuture.java:2480)
+	at org.eclipse.lsp4e.operations.linkedediting.LSPLinkedEditingBase.cancel(LSPLinkedEditingBase.java:85)
+	at org.eclipse.lsp4e.operations.linkedediting.LSPLinkedEditingBase.collectLinkedEditingRanges(LSPLinkedEditingBase.java:53)
+	at org.eclipse.lsp4e.operations.linkedediting.LSPLinkedEditingReconcilingStrategy.updateLinkedEditing(LSPLinkedEditingReconcilingStrategy.java:165)
+	at org.eclipse.lsp4e.operations.linkedediting.LSPLinkedEditingReconcilingStrategy.updateLinkedEditing(LSPLinkedEditingReconcilingStrategy.java:154)
+	at org.eclipse.lsp4e.operations.linkedediting.LSPLinkedEditingReconcilingStrategy$EditorSelectionChangedListener.selectionChanged(LSPLinkedEditingReconcilingStrategy.java:86)
+	at org.eclipse.jface.text.TextViewer.firePostSelectionChanged(TextViewer.java:2720)
+	at org.eclipse.jface.text.TextViewer.firePostSelectionChanged(TextViewer.java:2650)
+	at org.eclipse.jface.text.TextViewer$2.run(TextViewer.java:2629)
+	at org.eclipse.swt.widgets.Display.runTimer(Display.java:4170)
+	at org.eclipse.swt.widgets.Display.messageProc(Display.java:3291)
+	at org.eclipse.swt.internal.win32.OS.DispatchMessage(Native Method)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3658)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$5.run(PartRenderingEngine.java:1151)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:339)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1042)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:152)
+	at org.eclipse.ui.internal.Workbench.lambda$3(Workbench.java:639)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:339)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:546)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:173)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:152)
+	at org.mule.tooling.Application.start(Application.java:23)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:208)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:143)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:109)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:439)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:271)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:569)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:651)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:588)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1459)
+	at org.eclipse.equinox.launcher.Main.main(Main.java:1432)
+Caused by: java.util.concurrent.CancellationException
+	at java.base/java.util.concurrent.CompletableFuture.cancel(CompletableFuture.java:2478)
+	... 35 more
+
+!ENTRY org.eclipse.lsp4e 4 0 2026-02-26 09:07:52.340
+!MESSAGE java.util.concurrent.CancellationException
+!STACK 0
+java.util.concurrent.CompletionException: java.util.concurrent.CancellationException
+	at java.base/java.util.concurrent.CompletableFuture.encodeThrowable(CompletableFuture.java:332)
+	at java.base/java.util.concurrent.CompletableFuture.completeThrowable(CompletableFuture.java:347)
+	at java.base/java.util.concurrent.CompletableFuture$UniApply.tryFire(CompletableFuture.java:636)
+	at java.base/java.util.concurrent.CompletableFuture.postComplete(CompletableFuture.java:510)
+	at java.base/java.util.concurrent.CompletableFuture.cancel(CompletableFuture.java:2480)
+	at org.eclipse.lsp4e.operations.linkedediting.LSPLinkedEditingBase.cancel(LSPLinkedEditingBase.java:85)
+	at org.eclipse.lsp4e.operations.linkedediting.LSPLinkedEditingBase.collectLinkedEditingRanges(LSPLinkedEditingBase.java:53)
+	at org.eclipse.lsp4e.operations.linkedediting.LSPLinkedEditingReconcilingStrategy.updateLinkedEditing(LSPLinkedEditingReconcilingStrategy.java:165)
+	at org.eclipse.lsp4e.operations.linkedediting.LSPLinkedEditingReconcilingStrategy.updateLinkedEditing(LSPLinkedEditingReconcilingStrategy.java:154)
+	at org.eclipse.lsp4e.operations.linkedediting.LSPLinkedEditingReconcilingStrategy.lambda$0(LSPLinkedEditingReconcilingStrategy.java:132)
+	at org.eclipse.swt.widgets.RunnableLock.run(RunnableLock.java:40)
+	at org.eclipse.swt.widgets.Synchronizer.runAsyncMessages(Synchronizer.java:132)
+	at org.eclipse.swt.widgets.Display.runAsyncMessages(Display.java:4047)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3663)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$5.run(PartRenderingEngine.java:1151)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:339)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1042)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:152)
+	at org.eclipse.ui.internal.Workbench.lambda$3(Workbench.java:639)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:339)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:546)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:173)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:152)
+	at org.mule.tooling.Application.start(Application.java:23)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:208)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:143)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:109)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:439)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:271)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:569)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:651)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:588)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1459)
+	at org.eclipse.equinox.launcher.Main.main(Main.java:1432)
+Caused by: java.util.concurrent.CancellationException
+	at java.base/java.util.concurrent.CompletableFuture.cancel(CompletableFuture.java:2478)
+	... 32 more
+
+!ENTRY org.mule.tooling.core 1 0 2026-02-26 09:08:04.977
+!MESSAGE Mule Version 4.11.0, was mapped to Tooling Version 4.11.0
+
+!ENTRY org.eclipse.jface 2 0 2026-02-26 09:08:56.274
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2026-02-26 09:08:56.274
+!MESSAGE A conflict occurred for CTRL+SHIFT+P:
+Binding(CTRL+SHIFT+P,
+	ParameterizedCommand(Command(org.eclipse.ui.genericeditor.gotoMatchingBracket,Go to Matching Bracket,
+		Moves the cursor to the matching bracket,
+		Category(org.eclipse.core.commands.categories.autogenerated,Uncategorized,Commands that were either auto-generated or have no category,true),
+		WorkbenchHandlerServiceHandler("org.eclipse.ui.genericeditor.gotoMatchingBracket"),
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.genericeditor.genericEditorContext,,,system)
+Binding(CTRL+SHIFT+P,
+	ParameterizedCommand(Command(org.eclipse.wst.sse.ui.goto.matching.bracket,Matching Character,
+		Go to Matching Character,
+		Category(org.eclipse.ui.category.navigate,Navigate,null,true),
+		WorkbenchHandlerServiceHandler("org.eclipse.wst.sse.ui.goto.matching.bracket"),
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.wst.sse.ui.structuredTextEditorScope,,,system)
+Binding(CTRL+SHIFT+P,
+	ParameterizedCommand(Command(org.mule.tooling.apikit.common.openAPI,Open API Resource,
+		Search For API resources in the current workspace,
+		Category(org.mule.tooling.apikit.ui.commands.api.search.category,API Search,null,true),
+		WorkbenchHandlerServiceHandler("org.mule.tooling.apikit.common.openAPI"),
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+!SUBENTRY 1 org.eclipse.jface 2 0 2026-02-26 09:08:56.274
+!MESSAGE A conflict occurred for F3:
+Binding(F3,
+	ParameterizedCommand(Command(org.eclipse.jdt.ui.edit.text.java.open.editor,Open Declaration,
+		Open an editor on the selected element,
+		Category(org.eclipse.ui.category.navigate,Navigate,null,true),
+		WorkbenchHandlerServiceHandler("org.eclipse.jdt.ui.edit.text.java.open.editor"),
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(F3,
+	ParameterizedCommand(Command(org.eclipse.ui.edit.text.open.hyperlink,Open Hyperlink,
+		Opens the hyperlink at the caret location or opens a chooser if more than one hyperlink is available,
+		Category(org.eclipse.ui.category.textEditor,Text Editing,Text Editing Commands,true),
+		WorkbenchHandlerServiceHandler("org.eclipse.ui.edit.text.open.hyperlink"),
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.genericeditor.genericEditorContext,,,system)
+Binding(F3,
+	ParameterizedCommand(Command(org.eclipse.wst.sse.ui.open.file.from.source,Open Selection,
+		Open an editor on the selected link,
+		Category(org.eclipse.ui.category.edit,Edit,null,true),
+		WorkbenchHandlerServiceHandler("org.eclipse.wst.sse.ui.open.file.from.source"),
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.wst.sse.ui.structuredTextEditorScope,,,system)
+
+!ENTRY org.mule.tooling.runtime 1 0 2026-02-26 09:09:38.930
+!MESSAGE Starting shell termination command "[taskkill, /F, /PID, 22912]"
+
+!ENTRY org.mule.tooling.runtime 1 0 2026-02-26 09:09:39.015
+!MESSAGE Finished shell termination command "[taskkill, /F, /PID, 22912]"
+
+!ENTRY org.mule.tooling.runtime 1 0 2026-02-26 09:09:39.397
+!MESSAGE Starting shell termination command "[taskkill, /F, /PID, 37552]"
+
+!ENTRY org.mule.tooling.runtime 1 0 2026-02-26 09:09:39.474
+!MESSAGE Finished shell termination command "[taskkill, /F, /PID, 37552]"
+
+!ENTRY org.mule.tooling.runtime 2 0 2026-02-26 09:09:39.852
+!MESSAGE Termination command ShellTerminationCommand [getTerminationCommand()=[]] indicate retry action is necessary, moving on to next one
+
+!ENTRY org.mule.tooling.core 4 0 2026-02-26 09:09:39.860
+!MESSAGE Error preparing tooling instance
+!STACK 0
+org.mule.tooling.runtime.controller.MuleControllerException: Timeout while starting mule instance
+	at org.mule.tooling.runtime.controller.MuleController.start(MuleController.java:163)
+	at org.mule.tooling.client.startup.ToolingManager.setup(ToolingManager.java:343)
+	at org.mule.tooling.client.startup.ToolingManager.getToolingInstance(ToolingManager.java:163)
+	at org.mule.tooling.client.startup.ToolingClientStartup$1.lambda$0(ToolingClientStartup.java:24)
+	at java.base/java.util.Optional.ifPresent(Optional.java:178)
+	at org.mule.tooling.client.startup.ToolingClientStartup$1.run(ToolingClientStartup.java:22)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+Caused by: org.awaitility.core.ConditionTimeoutException: Condition with org.mule.tooling.runtime.controller.MuleController was not fulfilled within 1 minutes 30 seconds.
+	at org.awaitility.core.ConditionAwaiter.await(ConditionAwaiter.java:148)
+	at org.awaitility.core.CallableCondition.await(CallableCondition.java:78)
+	at org.awaitility.core.CallableCondition.await(CallableCondition.java:26)
+	at org.awaitility.core.ConditionFactory.until(ConditionFactory.java:873)
+	at org.awaitility.core.ConditionFactory.until(ConditionFactory.java:842)
+	at org.mule.tooling.runtime.controller.MuleController.start(MuleController.java:147)
+	... 6 more
+
+!ENTRY org.mule.tooling.core 4 0 2026-02-26 09:09:39.863
+!MESSAGE Tooling instance could not be started, another attempt will be made
+!STACK 0
+org.mule.tooling.client.startup.ToolingNotAvailableException: Tooling instance could not be started, another attempt will be made
+	at org.mule.tooling.client.startup.ToolingManager.setup(ToolingManager.java:356)
+	at org.mule.tooling.client.startup.ToolingManager.getToolingInstance(ToolingManager.java:163)
+	at org.mule.tooling.client.startup.ToolingClientStartup$1.lambda$0(ToolingClientStartup.java:24)
+	at java.base/java.util.Optional.ifPresent(Optional.java:178)
+	at org.mule.tooling.client.startup.ToolingClientStartup$1.run(ToolingClientStartup.java:22)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+Caused by: org.mule.tooling.runtime.controller.MuleControllerException: Timeout while starting mule instance
+	at org.mule.tooling.runtime.controller.MuleController.start(MuleController.java:163)
+	at org.mule.tooling.client.startup.ToolingManager.setup(ToolingManager.java:343)
+	... 5 more
+Caused by: org.awaitility.core.ConditionTimeoutException: Condition with org.mule.tooling.runtime.controller.MuleController was not fulfilled within 1 minutes 30 seconds.
+	at org.awaitility.core.ConditionAwaiter.await(ConditionAwaiter.java:148)
+	at org.awaitility.core.CallableCondition.await(CallableCondition.java:78)
+	at org.awaitility.core.CallableCondition.await(CallableCondition.java:26)
+	at org.awaitility.core.ConditionFactory.until(ConditionFactory.java:873)
+	at org.awaitility.core.ConditionFactory.until(ConditionFactory.java:842)
+	at org.mule.tooling.runtime.controller.MuleController.start(MuleController.java:147)
+	... 6 more
+
+!ENTRY org.mule.tooling.core 1 0 2026-02-26 09:09:54.907
+!MESSAGE Checking updates in Exchange for: [org.mule.modules:mule-apikit-module, org.mule.connectors:mule-sockets-connector, org.mule.connectors:mule-http-connector]
+
+!ENTRY org.mule.tooling.core 1 0 2026-02-26 09:09:57.054
+!MESSAGE Check finished: all Mule Modules are up to date
+
+!ENTRY org.mule.tooling.maven 1 0 2026-02-26 09:17:13.520
+!MESSAGE  *** 49812 EmbeddedMavenRunner [configuration=MavenPreferences [isDontWarnAgainIfNoInstallationFoundChecked()=false, isGlobalMavenSupportEnabled()=true, getMavenInstallationHome()=C:\maven, getMavenOpts()=, getDefaultGroupId()=com.mycompany, getBaseCommandline()=mvn clean package -nsu -DskipMunitTests, isDisplayRuntimeVersionWarning()=true, isExternalInstallation()=false]]
+
+!ENTRY org.mule.tooling.maven 1 0 2026-02-26 09:17:26.393
+!MESSAGE  *** 9939 EmbeddedMavenRunner [configuration=MavenPreferences [isDontWarnAgainIfNoInstallationFoundChecked()=false, isGlobalMavenSupportEnabled()=true, getMavenInstallationHome()=C:\maven, getMavenOpts()=, getDefaultGroupId()=com.mycompany, getBaseCommandline()=mvn clean package -nsu -DskipMunitTests, isDisplayRuntimeVersionWarning()=true, isExternalInstallation()=false]]
+
+!ENTRY org.mule.tooling.maven 1 0 2026-02-26 09:17:36.190
+!MESSAGE  *** 9752 EmbeddedMavenRunner [configuration=MavenPreferences [isDontWarnAgainIfNoInstallationFoundChecked()=false, isGlobalMavenSupportEnabled()=true, getMavenInstallationHome()=C:\maven, getMavenOpts()=, getDefaultGroupId()=com.mycompany, getBaseCommandline()=mvn clean package -nsu -DskipMunitTests, isDisplayRuntimeVersionWarning()=true, isExternalInstallation()=false]]
+
+!ENTRY org.mule.tooling.core 1 0 2026-02-26 09:27:40.021
+!MESSAGE Tooling workspace is C:\WS\ejerciciopractico\.tooling-apps-cache
+
+!ENTRY org.mule.tooling.maven 1 0 2026-02-26 09:28:02.637
+!MESSAGE  *** 21481 EmbeddedMavenRunner [configuration=DefaultMavenRunnerConfiguration [externalInstallation=false, mavenInstallationHome=C:\maven, mavenOpts=]]
+
+!ENTRY org.mule.tooling.core 4 0 2026-02-26 09:30:56.523
+!MESSAGE There was a problem updating the cached tooling project for [Mule Project] Name: system - Domain: default. Removing from cache.
+!STACK 1
+org.eclipse.core.runtime.CoreException: There was an error retrieving the current XML configuration for performing a DataSense operation
+	at org.mule.tooling.runtime.tooling.ToolingProjectFile.getCurrentXmlContents(ToolingProjectFile.java:172)
+	at org.mule.tooling.runtime.tooling.ToolingProjectFile.create(ToolingProjectFile.java:55)
+	at org.mule.tooling.runtime.tooling.ToolingProject.initializeProjectFile(ToolingProject.java:93)
+	at org.mule.tooling.runtime.tooling.ToolingProject.updateOpenFiles(ToolingProject.java:111)
+	at org.mule.tooling.runtime.tooling.ToolingProject.<init>(ToolingProject.java:65)
+	at org.mule.tooling.runtime.tooling.ToolingProject.<init>(ToolingProject.java:56)
+	at org.mule.tooling.runtime.tooling.ToolingWorkspace.updateConfigFile(ToolingWorkspace.java:368)
+	at org.mule.tooling.runtime.tooling.ToolingWorkspace.lambda$9(ToolingWorkspace.java:227)
+	at org.mule.tooling.runtime.tooling.ToolingProjectsCache.runWithToolingArtifactIfPresent(ToolingProjectsCache.java:77)
+	at org.mule.tooling.runtime.tooling.ToolingWorkspace.updateCachedProject(ToolingWorkspace.java:198)
+	at org.mule.tooling.runtime.tooling.ToolingWorkspace.lambda$8(ToolingWorkspace.java:189)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:840)
+Caused by: java.lang.NullPointerException: Cannot invoke "org.eclipse.core.resources.IFile.isAccessible()" because "muleConfigurationFile" is null
+	at org.mule.tooling.runtime.tooling.ToolingProjectFile.getCurrentXmlContents(ToolingProjectFile.java:163)
+	... 13 more
+!SUBENTRY 1 org.mule.tooling.runtime 4 0 2026-02-26 09:30:56.525
+!MESSAGE There was an error retrieving the current XML configuration for performing a DataSense operation
+!STACK 0
+java.lang.NullPointerException: Cannot invoke "org.eclipse.core.resources.IFile.isAccessible()" because "muleConfigurationFile" is null
+	at org.mule.tooling.runtime.tooling.ToolingProjectFile.getCurrentXmlContents(ToolingProjectFile.java:163)
+	at org.mule.tooling.runtime.tooling.ToolingProjectFile.create(ToolingProjectFile.java:55)
+	at org.mule.tooling.runtime.tooling.ToolingProject.initializeProjectFile(ToolingProject.java:93)
+	at org.mule.tooling.runtime.tooling.ToolingProject.updateOpenFiles(ToolingProject.java:111)
+	at org.mule.tooling.runtime.tooling.ToolingProject.<init>(ToolingProject.java:65)
+	at org.mule.tooling.runtime.tooling.ToolingProject.<init>(ToolingProject.java:56)
+	at org.mule.tooling.runtime.tooling.ToolingWorkspace.updateConfigFile(ToolingWorkspace.java:368)
+	at org.mule.tooling.runtime.tooling.ToolingWorkspace.lambda$9(ToolingWorkspace.java:227)
+	at org.mule.tooling.runtime.tooling.ToolingProjectsCache.runWithToolingArtifactIfPresent(ToolingProjectsCache.java:77)
+	at org.mule.tooling.runtime.tooling.ToolingWorkspace.updateCachedProject(ToolingWorkspace.java:198)
+	at org.mule.tooling.runtime.tooling.ToolingWorkspace.lambda$8(ToolingWorkspace.java:189)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:840)
+
+!ENTRY org.mule.tooling.core 4 0 2026-02-26 09:33:02.183
+!MESSAGE Error preparing tooling instance
+!STACK 0
+org.mule.tooling.runtime.controller.MuleControllerException: There was an error while stopping instance
+	at org.mule.tooling.runtime.controller.MuleController.stop(MuleController.java:234)
+	at org.mule.tooling.runtime.controller.MuleController.start(MuleController.java:162)
+	at org.mule.tooling.client.startup.ToolingManager.setup(ToolingManager.java:343)
+	at org.mule.tooling.client.startup.ToolingManager.getToolingInstance(ToolingManager.java:163)
+	at org.mule.tooling.metadata.datasense.DataSenseJob.run(DataSenseJob.java:86)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+Caused by: java.lang.NullPointerException: Cannot invoke "java.nio.channels.FileLock.isValid()" because "this.studioLock" is null
+	at org.mule.tooling.runtime.controller.MuleController.stop(MuleController.java:216)
+	... 5 more
+
+!ENTRY org.mule.tooling.core 4 0 2026-02-26 09:33:02.185
+!MESSAGE Error while resolving data sense
+!STACK 0
+org.mule.tooling.client.startup.ToolingNotAvailableException: Tooling instance could not be started, another attempt will be made
+	at org.mule.tooling.client.startup.ToolingManager.setup(ToolingManager.java:356)
+	at org.mule.tooling.client.startup.ToolingManager.getToolingInstance(ToolingManager.java:163)
+	at org.mule.tooling.metadata.datasense.DataSenseJob.run(DataSenseJob.java:86)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+Caused by: org.mule.tooling.runtime.controller.MuleControllerException: There was an error while stopping instance
+	at org.mule.tooling.runtime.controller.MuleController.stop(MuleController.java:234)
+	at org.mule.tooling.runtime.controller.MuleController.start(MuleController.java:162)
+	at org.mule.tooling.client.startup.ToolingManager.setup(ToolingManager.java:343)
+	... 3 more
+Caused by: java.lang.NullPointerException: Cannot invoke "java.nio.channels.FileLock.isValid()" because "this.studioLock" is null
+	at org.mule.tooling.runtime.controller.MuleController.stop(MuleController.java:216)
+	... 5 more
+
+!ENTRY org.mule.tooling.runtime 1 0 2026-02-26 09:46:00.836
+!MESSAGE Starting shell termination command "[taskkill, /F, /PID, 26144]"
+
+!ENTRY org.mule.tooling.runtime 1 0 2026-02-26 09:46:01.162
+!MESSAGE Finished shell termination command "[taskkill, /F, /PID, 26144]"
+
+!ENTRY org.mule.tooling.runtime 2 0 2026-02-26 09:46:01.588
+!MESSAGE Termination command ShellTerminationCommand [getTerminationCommand()=[taskkill, /F, /PID, 26144]] indicate retry action is necessary, moving on to next one
+
+!ENTRY org.mule.tooling.runtime 1 0 2026-02-26 09:46:01.593
+!MESSAGE Starting shell termination command "[taskkill, /F, /PID, 29000]"
+
+!ENTRY org.mule.tooling.runtime 1 0 2026-02-26 09:46:01.661
+!MESSAGE Finished shell termination command "[taskkill, /F, /PID, 29000]"
+
+!ENTRY org.mule.tooling.runtime 2 0 2026-02-26 09:46:01.988
+!MESSAGE Termination command ShellTerminationCommand [getTerminationCommand()=[taskkill, /F, /PID, 29000]] indicate retry action is necessary, moving on to next one
+
+!ENTRY org.mule.tooling.core 4 0 2026-02-26 09:46:05.743
+!MESSAGE Could not terminate launch system
+!STACK 0
+java.lang.RuntimeException: Could not terminate launch system
+	at org.mule.tooling.runtime.launch.MuleRuntimeProcessLaunchDelegate.terminateLaunchSync(MuleRuntimeProcessLaunchDelegate.java:936)
+	at org.mule.tooling.runtime.launch.MuleRuntimeProcessLaunchDelegate.removeAllMuleLaunchesBut(MuleRuntimeProcessLaunchDelegate.java:894)
+	at org.mule.tooling.runtime.launch.MuleRuntimeProcessLaunchDelegate.resolveConflictingLaunches(MuleRuntimeProcessLaunchDelegate.java:830)
+	at org.mule.tooling.runtime.launch.MuleRuntimeProcessLaunchDelegate.launch(MuleRuntimeProcessLaunchDelegate.java:295)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:805)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:716)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1038)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$1.run(DebugUIPlugin.java:1241)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.mule.tooling.core 2 0 2026-02-26 09:46:17.265
+!MESSAGE Cannot delete C:\AnypointStudio\AnypointStudio\plugins\org.mule.tooling.server.4.11.ee_7.24.0.202602021436\mule\apps
+!STACK 0
+org.apache.commons.io.IOExceptionList: 3 exception(s): [org.apache.commons.io.IOIndexedException: IOException #0: Cannot delete file: C:\AnypointStudio\AnypointStudio\plugins\org.mule.tooling.server.4.11.ee_7.24.0.202602021436\mule\apps\experience, org.apache.commons.io.IOIndexedException: IOException #3: Cannot delete file: C:\AnypointStudio\AnypointStudio\plugins\org.mule.tooling.server.4.11.ee_7.24.0.202602021436\mule\apps\process-anchor.txt, org.apache.commons.io.IOIndexedException: IOException #4: Cannot delete file: C:\AnypointStudio\AnypointStudio\plugins\org.mule.tooling.server.4.11.ee_7.24.0.202602021436\mule\apps\system]
+	at org.apache.commons.io.IOExceptionList.checkEmpty(IOExceptionList.java:50)
+	at org.apache.commons.io.function.IOStream.forAll(IOStream.java:357)
+	at org.apache.commons.io.function.IOStreams.forAll(IOStreams.java:42)
+	at org.apache.commons.io.function.IOStreams.forAll(IOStreams.java:36)
+	at org.apache.commons.io.function.IOConsumer.forAll(IOConsumer.java:82)
+	at org.apache.commons.io.FileUtils.cleanDirectory(FileUtils.java:381)
+	at org.mule.tooling.core.io.MuleResourceUtils.cleanDirectory(MuleResourceUtils.java:991)
+	at org.mule.tooling.runtime.controller.MuleController.stop(MuleController.java:241)
+	at org.mule.tooling.runtime.launch.MuleRuntimeProcessLaunchDelegate.launchesTerminated(MuleRuntimeProcessLaunchDelegate.java:1080)
+	at org.eclipse.debug.internal.core.LaunchManager$LaunchesNotifier.run(LaunchManager.java:300)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:47)
+	at org.eclipse.debug.internal.core.LaunchManager$LaunchesNotifier.notify(LaunchManager.java:257)
+	at org.eclipse.debug.internal.core.LaunchManager.fireUpdate(LaunchManager.java:931)
+	at org.eclipse.debug.core.Launch.fireTerminate(Launch.java:479)
+	at org.eclipse.debug.core.Launch.handleDebugEvents(Launch.java:644)
+	at org.eclipse.debug.core.DebugPlugin$EventNotifier.run(DebugPlugin.java:1263)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:47)
+	at org.eclipse.debug.core.DebugPlugin$EventNotifier.dispatch(DebugPlugin.java:1297)
+	at org.eclipse.debug.core.DebugPlugin$EventDispatchJob.run(DebugPlugin.java:498)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+Caused by: org.apache.commons.io.IOIndexedException: IOException #0: Cannot delete file: C:\AnypointStudio\AnypointStudio\plugins\org.mule.tooling.server.4.11.ee_7.24.0.202602021436\mule\apps\experience
+	at org.apache.commons.io.function.IOStream.lambda$forAll$11(IOStream.java:352)
+	at java.base/java.util.Spliterators$ArraySpliterator.forEachRemaining(Spliterators.java:992)
+	at java.base/java.util.stream.ReferencePipeline$Head.forEach(ReferencePipeline.java:762)
+	at org.apache.commons.io.function.IOStream.forAll(IOStream.java:343)
+	... 18 more
+Caused by: java.io.IOException: Cannot delete file: C:\AnypointStudio\AnypointStudio\plugins\org.mule.tooling.server.4.11.ee_7.24.0.202602021436\mule\apps\experience
+	at org.apache.commons.io.FileUtils.forceDelete(FileUtils.java:1428)
+	at org.apache.commons.io.FileUtils.lambda$cleanDirectory$0(FileUtils.java:381)
+	at org.apache.commons.io.function.IOStream.lambda$forAll$11(IOStream.java:345)
+	... 21 more
+Caused by: java.nio.file.AccessDeniedException: C:\AnypointStudio\AnypointStudio\plugins\org.mule.tooling.server.4.11.ee_7.24.0.202602021436\mule\apps\experience\repository\org\mule\apikit\parser-service\2.7.17\parser-service-2.7.17.pom
+	at java.base/sun.nio.fs.WindowsException.translateToIOException(WindowsException.java:89)
+	at java.base/sun.nio.fs.WindowsException.rethrowAsIOException(WindowsException.java:103)
+	at java.base/sun.nio.fs.WindowsException.rethrowAsIOException(WindowsException.java:108)
+	at java.base/sun.nio.fs.WindowsFileSystemProvider.implDelete(WindowsFileSystemProvider.java:275)
+	at java.base/sun.nio.fs.AbstractFileSystemProvider.deleteIfExists(AbstractFileSystemProvider.java:110)
+	at java.base/java.nio.file.Files.deleteIfExists(Files.java:1191)
+	at org.apache.commons.io.file.DeletingPathVisitor.visitFile(DeletingPathVisitor.java:158)
+	at org.apache.commons.io.file.DeletingPathVisitor.visitFile(DeletingPathVisitor.java:37)
+	at java.base/java.nio.file.Files.walkFileTree(Files.java:2811)
+	at java.base/java.nio.file.Files.walkFileTree(Files.java:2882)
+	at org.apache.commons.io.file.PathUtils.visitFileTree(PathUtils.java:1845)
+	at org.apache.commons.io.file.PathUtils.deleteDirectory(PathUtils.java:597)
+	at org.apache.commons.io.file.PathUtils.delete(PathUtils.java:556)
+	at org.apache.commons.io.FileUtils.forceDelete(FileUtils.java:1421)
+	... 23 more
+
+!ENTRY org.mule.tooling.maven 1 0 2026-02-26 09:47:24.559
+!MESSAGE  *** 64927 EmbeddedMavenRunner [configuration=MavenPreferences [isDontWarnAgainIfNoInstallationFoundChecked()=false, isGlobalMavenSupportEnabled()=true, getMavenInstallationHome()=C:\maven, getMavenOpts()=, getDefaultGroupId()=com.mycompany, getBaseCommandline()=mvn clean package -nsu -DskipMunitTests, isDisplayRuntimeVersionWarning()=true, isExternalInstallation()=false]]
+
+!ENTRY org.mule.tooling.maven 1 0 2026-02-26 09:47:32.849
+!MESSAGE  *** 8230 EmbeddedMavenRunner [configuration=MavenPreferences [isDontWarnAgainIfNoInstallationFoundChecked()=false, isGlobalMavenSupportEnabled()=true, getMavenInstallationHome()=C:\maven, getMavenOpts()=, getDefaultGroupId()=com.mycompany, getBaseCommandline()=mvn clean package -nsu -DskipMunitTests, isDisplayRuntimeVersionWarning()=true, isExternalInstallation()=false]]
+
+!ENTRY org.mule.tooling.maven 1 0 2026-02-26 09:47:41.601
+!MESSAGE  *** 8708 EmbeddedMavenRunner [configuration=MavenPreferences [isDontWarnAgainIfNoInstallationFoundChecked()=false, isGlobalMavenSupportEnabled()=true, getMavenInstallationHome()=C:\maven, getMavenOpts()=, getDefaultGroupId()=com.mycompany, getBaseCommandline()=mvn clean package -nsu -DskipMunitTests, isDisplayRuntimeVersionWarning()=true, isExternalInstallation()=false]]
+
+!ENTRY org.mule.tooling.maven 1 0 2026-02-26 09:48:05.251
+!MESSAGE  *** 3242 EmbeddedMavenRunner [configuration=DefaultMavenRunnerConfiguration [externalInstallation=false, mavenInstallationHome=C:\maven, mavenOpts=]]
+
+!ENTRY org.mule.tooling.core 4 0 2026-02-26 09:52:57.676
+!MESSAGE Error preparing tooling instance
+!STACK 0
+org.mule.tooling.runtime.controller.MuleControllerException: There was an error while stopping instance
+	at org.mule.tooling.runtime.controller.MuleController.stop(MuleController.java:234)
+	at org.mule.tooling.runtime.controller.MuleController.start(MuleController.java:162)
+	at org.mule.tooling.client.startup.ToolingManager.setup(ToolingManager.java:343)
+	at org.mule.tooling.client.startup.ToolingManager.getToolingInstance(ToolingManager.java:163)
+	at org.mule.tooling.metadata.datasense.DataSenseJob.run(DataSenseJob.java:86)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+Caused by: java.lang.NullPointerException: Cannot invoke "java.nio.channels.FileLock.isValid()" because "this.studioLock" is null
+	at org.mule.tooling.runtime.controller.MuleController.stop(MuleController.java:216)
+	... 5 more
+
+!ENTRY org.mule.tooling.core 4 0 2026-02-26 09:52:57.681
+!MESSAGE Error while resolving data sense
+!STACK 0
+org.mule.tooling.client.startup.ToolingNotAvailableException: Tooling instance could not be started, another attempt will be made
+	at org.mule.tooling.client.startup.ToolingManager.setup(ToolingManager.java:356)
+	at org.mule.tooling.client.startup.ToolingManager.getToolingInstance(ToolingManager.java:163)
+	at org.mule.tooling.metadata.datasense.DataSenseJob.run(DataSenseJob.java:86)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+Caused by: org.mule.tooling.runtime.controller.MuleControllerException: There was an error while stopping instance
+	at org.mule.tooling.runtime.controller.MuleController.stop(MuleController.java:234)
+	at org.mule.tooling.runtime.controller.MuleController.start(MuleController.java:162)
+	at org.mule.tooling.client.startup.ToolingManager.setup(ToolingManager.java:343)
+	... 3 more
+Caused by: java.lang.NullPointerException: Cannot invoke "java.nio.channels.FileLock.isValid()" because "this.studioLock" is null
+	at org.mule.tooling.runtime.controller.MuleController.stop(MuleController.java:216)
+	... 5 more
+
+!ENTRY org.mule.tooling.core 4 0 2026-02-26 09:52:57.743
+!MESSAGE Couldn't retreive main API location for dependency e-test-rmunozpardo
+!STACK 0
+java.util.concurrent.ExecutionException: org.mule.tooling.client.startup.ToolingNotAvailableException: Tooling instance is not available, Using Java home C:\AnypointStudio\AnypointStudio\plugins\org.mule.tooling.jdk.win32.x86_64_1.4.1
+	at com.google.common.util.concurrent.AbstractFuture.getDoneValue(AbstractFuture.java:594)
+	at com.google.common.util.concurrent.AbstractFuture.get(AbstractFuture.java:553)
+	at com.google.common.util.concurrent.AbstractFuture$TrustedFuture.get(AbstractFuture.java:110)
+	at com.google.common.util.concurrent.Uninterruptibles.getUninterruptibly(Uninterruptibles.java:247)
+	at com.google.common.cache.LocalCache$Segment.getAndRecordStats(LocalCache.java:2361)
+	at com.google.common.cache.LocalCache$Segment.loadSync(LocalCache.java:2329)
+	at com.google.common.cache.LocalCache$Segment.lockedGetOrLoad(LocalCache.java:2187)
+	at com.google.common.cache.LocalCache$Segment.get(LocalCache.java:2081)
+	at com.google.common.cache.LocalCache.get(LocalCache.java:4036)
+	at com.google.common.cache.LocalCache.getOrLoad(LocalCache.java:4059)
+	at com.google.common.cache.LocalCache$LocalLoadingCache.get(LocalCache.java:5041)
+	at org.mule.tooling.apikit.runtime.ApikitProjectComponent.getLocation(ApikitProjectComponent.java:125)
+	at org.mule.tooling.apikit.runtime.ApikitProjectComponent.getAPIReferences(ApikitProjectComponent.java:89)
+	at org.mule.tooling.apikit.runtime.APIReferencesCalculator.options(APIReferencesCalculator.java:20)
+	at org.mule.tooling.ui.modules.core.widgets.editors.EnumFieldEditor.calcOptions(EnumFieldEditor.java:508)
+	at org.mule.tooling.ui.modules.core.widgets.editors.EnumFieldEditor.calcOptions(EnumFieldEditor.java:701)
+	at org.mule.tooling.ui.modules.core.widgets.editors.EnumFieldEditor.setLiteralValue(EnumFieldEditor.java:610)
+	at org.mule.tooling.ui.modules.core.widgets.editors.ExpressionWrapperFieldEditor$LiteralFieldEditorValueAware.setValue(ExpressionWrapperFieldEditor.java:245)
+	at org.mule.tooling.ui.modules.core.widgets.editors.ExpressionWrapperFieldEditor.setValue(ExpressionWrapperFieldEditor.java:134)
+	at org.mule.tooling.ui.modules.core.widgets.editors.AbstractFieldEditor.loadFrom(AbstractFieldEditor.java:417)
+	at org.mule.tooling.ui.modules.core.widgets.editors.LabelledFieldEditor.loadFrom(LabelledFieldEditor.java:341)
+	at org.mule.tooling.ui.modules.core.widgets.editors.EnumFieldEditor.loadFrom(EnumFieldEditor.java:656)
+	at org.mule.tooling.ui.modules.core.widgets.AttributesPropertyPage.loadFrom(AttributesPropertyPage.java:1095)
+	at org.mule.tooling.messageflow.dialog.GlobalElementDialog.forceReloadOfPages(GlobalElementDialog.java:286)
+	at org.mule.tooling.messageflow.dialog.GlobalElementDialog.createDialogArea(GlobalElementDialog.java:245)
+	at org.eclipse.jface.dialogs.TitleAreaDialog.createContents(TitleAreaDialog.java:166)
+	at org.eclipse.jface.window.Window.create(Window.java:431)
+	at org.eclipse.jface.dialogs.Dialog.create(Dialog.java:1092)
+	at org.eclipse.jface.window.Window.open(Window.java:788)
+	at org.mule.tooling.ui.modules.core.widgets.editors.GlobalRefEditor$EditGlobalElementAction.editGlobalElement(GlobalRefEditor.java:820)
+	at org.mule.tooling.ui.modules.core.widgets.editors.GlobalRefEditor$EditGlobalElementAction.run(GlobalRefEditor.java:696)
+	at org.eclipse.jface.action.Action.runWithEvent(Action.java:474)
+	at org.eclipse.jface.action.ActionContributionItem.handleWidgetSelection(ActionContributionItem.java:581)
+	at org.eclipse.jface.action.ActionContributionItem.lambda$5(ActionContributionItem.java:454)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:89)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4274)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1066)
+	at org.eclipse.swt.widgets.Display.runDeferredEvents(Display.java:4072)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3660)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$5.run(PartRenderingEngine.java:1151)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:339)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1042)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:152)
+	at org.eclipse.ui.internal.Workbench.lambda$3(Workbench.java:639)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:339)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:546)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:173)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:152)
+	at org.mule.tooling.Application.start(Application.java:23)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:208)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:143)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:109)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:439)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:271)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:569)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:651)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:588)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1459)
+	at org.eclipse.equinox.launcher.Main.main(Main.java:1432)
+Caused by: org.mule.tooling.client.startup.ToolingNotAvailableException: Tooling instance is not available, Using Java home C:\AnypointStudio\AnypointStudio\plugins\org.mule.tooling.jdk.win32.x86_64_1.4.1
+	at org.mule.tooling.client.startup.ToolingManager.setup(ToolingManager.java:211)
+	at org.mule.tooling.client.startup.ToolingManager.getToolingInstance(ToolingManager.java:163)
+	at org.mule.tooling.client.api.ToolingResourceLoader.fromProject(ToolingResourceLoader.java:44)
+	at org.mule.tooling.apikit.runtime.ApikitProjectComponent.parseLocation(ApikitProjectComponent.java:133)
+	at org.mule.tooling.apikit.runtime.ApikitProjectComponent$1.load(ApikitProjectComponent.java:51)
+	at org.mule.tooling.apikit.runtime.ApikitProjectComponent$1.load(ApikitProjectComponent.java:1)
+	at com.google.common.cache.LocalCache$LoadingValueReference.loadFuture(LocalCache.java:3589)
+	at com.google.common.cache.LocalCache$Segment.loadSync(LocalCache.java:2328)
+	... 56 more
+
+!ENTRY org.mule.tooling.core 4 0 2026-02-26 09:53:34.233
+!MESSAGE Error while resolving data sense
+!STACK 0
+org.mule.tooling.client.startup.ToolingNotAvailableException: Tooling instance is not available, Using Java home C:\AnypointStudio\AnypointStudio\plugins\org.mule.tooling.jdk.win32.x86_64_1.4.1
+	at org.mule.tooling.client.startup.ToolingManager.setup(ToolingManager.java:211)
+	at org.mule.tooling.client.startup.ToolingManager.getToolingInstance(ToolingManager.java:163)
+	at org.mule.tooling.metadata.datasense.DataSenseJob.run(DataSenseJob.java:86)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.mule.tooling.core 4 0 2026-02-26 09:53:35.858
+!MESSAGE Error while resolving data sense
+!STACK 0
+org.mule.tooling.client.startup.ToolingNotAvailableException: Tooling instance is not available, Using Java home C:\AnypointStudio\AnypointStudio\plugins\org.mule.tooling.jdk.win32.x86_64_1.4.1
+	at org.mule.tooling.client.startup.ToolingManager.setup(ToolingManager.java:211)
+	at org.mule.tooling.client.startup.ToolingManager.getToolingInstance(ToolingManager.java:163)
+	at org.mule.tooling.metadata.datasense.DataSenseJob.run(DataSenseJob.java:86)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.mule.tooling.core 4 0 2026-02-26 09:53:39.050
+!MESSAGE Error while resolving data sense
+!STACK 0
+org.mule.tooling.client.startup.ToolingNotAvailableException: Tooling instance is not available, Using Java home C:\AnypointStudio\AnypointStudio\plugins\org.mule.tooling.jdk.win32.x86_64_1.4.1
+	at org.mule.tooling.client.startup.ToolingManager.setup(ToolingManager.java:211)
+	at org.mule.tooling.client.startup.ToolingManager.getToolingInstance(ToolingManager.java:163)
+	at org.mule.tooling.metadata.datasense.DataSenseJob.run(DataSenseJob.java:86)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.eclipse.jface 2 0 2026-02-26 09:53:51.900
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2026-02-26 09:53:51.901
+!MESSAGE A conflict occurred for CTRL+F:
+Binding(CTRL+F,
+	ParameterizedCommand(Command(org.eclipse.ui.edit.findReplace,Find and Replace,
+		Find and replace text,
+		Category(org.eclipse.ui.category.edit,Edit,null,true),
+		WorkbenchHandlerServiceHandler("org.eclipse.ui.edit.findReplace"),
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(CTRL+F,
+	ParameterizedCommand(Command(org.mule.tooling.ui.dfl.contribution.commands.searchCommand,Find/Replace,
+		Find/Replace,
+		Category(org.mule.tooling.ui.commandcategory,org.mule.tooling.ui.commandcategory,Category for menu commands,true),
+		WorkbenchHandlerServiceHandler("org.mule.tooling.ui.dfl.contribution.commands.searchCommand"),
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.mule.tooling.contexts.mulePropertiesEditor,,,system)
+Binding(CTRL+F,
+	ParameterizedCommand(Command(org.mule.tooling.commands.focusSearchCommand,Focus Search Command,
+		Focus Search in Palette,
+		Category(org.mule.tooling.ui.commandcategory,org.mule.tooling.ui.commandcategory,Category for menu commands,true),
+		WorkbenchHandlerServiceHandler("org.mule.tooling.commands.focusSearchCommand"),
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.mule.tooling.contexts.mulePropertiesEditor,,,system)
+
+!ENTRY org.mule.tooling.maven 1 0 2026-02-26 09:54:01.691
+!MESSAGE  *** 2325 EmbeddedMavenRunner [configuration=DefaultMavenRunnerConfiguration [externalInstallation=false, mavenInstallationHome=C:\maven, mavenOpts=]]
+
+!ENTRY org.mule.tooling.core 4 0 2026-02-26 09:54:01.975
+!MESSAGE Error while resolving data sense
+!STACK 0
+org.mule.tooling.client.startup.ToolingNotAvailableException: Tooling instance is not available, Using Java home C:\AnypointStudio\AnypointStudio\plugins\org.mule.tooling.jdk.win32.x86_64_1.4.1
+	at org.mule.tooling.client.startup.ToolingManager.setup(ToolingManager.java:211)
+	at org.mule.tooling.client.startup.ToolingManager.getToolingInstance(ToolingManager.java:163)
+	at org.mule.tooling.metadata.datasense.DataSenseJob.run(DataSenseJob.java:86)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.mule.tooling.core 4 0 2026-02-26 09:54:12.347
+!MESSAGE Error while resolving data sense
+!STACK 0
+org.mule.tooling.client.startup.ToolingNotAvailableException: Tooling instance is not available, Using Java home C:\AnypointStudio\AnypointStudio\plugins\org.mule.tooling.jdk.win32.x86_64_1.4.1
+	at org.mule.tooling.client.startup.ToolingManager.setup(ToolingManager.java:211)
+	at org.mule.tooling.client.startup.ToolingManager.getToolingInstance(ToolingManager.java:163)
+	at org.mule.tooling.metadata.datasense.DataSenseJob.run(DataSenseJob.java:86)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.mule.tooling.core 4 0 2026-02-26 09:54:34.085
+!MESSAGE Error while resolving data sense
+!STACK 0
+org.mule.tooling.client.startup.ToolingNotAvailableException: Tooling instance is not available, Using Java home C:\AnypointStudio\AnypointStudio\plugins\org.mule.tooling.jdk.win32.x86_64_1.4.1
+	at org.mule.tooling.client.startup.ToolingManager.setup(ToolingManager.java:211)
+	at org.mule.tooling.client.startup.ToolingManager.getToolingInstance(ToolingManager.java:163)
+	at org.mule.tooling.metadata.datasense.DataSenseJob.run(DataSenseJob.java:86)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.mule.tooling.core 4 0 2026-02-26 09:54:43.636
+!MESSAGE Error while resolving data sense
+!STACK 0
+org.mule.tooling.client.startup.ToolingNotAvailableException: Tooling instance is not available, Using Java home C:\AnypointStudio\AnypointStudio\plugins\org.mule.tooling.jdk.win32.x86_64_1.4.1
+	at org.mule.tooling.client.startup.ToolingManager.setup(ToolingManager.java:211)
+	at org.mule.tooling.client.startup.ToolingManager.getToolingInstance(ToolingManager.java:163)
+	at org.mule.tooling.metadata.datasense.DataSenseJob.run(DataSenseJob.java:86)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.mule.tooling.core 4 0 2026-02-26 09:54:50.483
+!MESSAGE Error while resolving data sense
+!STACK 0
+org.mule.tooling.client.startup.ToolingNotAvailableException: Tooling instance is not available, Using Java home C:\AnypointStudio\AnypointStudio\plugins\org.mule.tooling.jdk.win32.x86_64_1.4.1
+	at org.mule.tooling.client.startup.ToolingManager.setup(ToolingManager.java:211)
+	at org.mule.tooling.client.startup.ToolingManager.getToolingInstance(ToolingManager.java:163)
+	at org.mule.tooling.metadata.datasense.DataSenseJob.run(DataSenseJob.java:86)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.mule.tooling.core 4 0 2026-02-26 09:54:51.444
+!MESSAGE Error while resolving data sense
+!STACK 0
+org.mule.tooling.client.startup.ToolingNotAvailableException: Tooling instance is not available, Using Java home C:\AnypointStudio\AnypointStudio\plugins\org.mule.tooling.jdk.win32.x86_64_1.4.1
+	at org.mule.tooling.client.startup.ToolingManager.setup(ToolingManager.java:211)
+	at org.mule.tooling.client.startup.ToolingManager.getToolingInstance(ToolingManager.java:163)
+	at org.mule.tooling.metadata.datasense.DataSenseJob.run(DataSenseJob.java:86)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.mule.tooling.core 4 0 2026-02-26 09:55:09.658
+!MESSAGE Error while resolving data sense
+!STACK 0
+org.mule.tooling.client.startup.ToolingNotAvailableException: Tooling instance is not available, Using Java home C:\AnypointStudio\AnypointStudio\plugins\org.mule.tooling.jdk.win32.x86_64_1.4.1
+	at org.mule.tooling.client.startup.ToolingManager.setup(ToolingManager.java:211)
+	at org.mule.tooling.client.startup.ToolingManager.getToolingInstance(ToolingManager.java:163)
+	at org.mule.tooling.metadata.datasense.DataSenseJob.run(DataSenseJob.java:86)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.mule.tooling.core 4 0 2026-02-26 09:55:11.540
+!MESSAGE Error while resolving data sense
+!STACK 0
+org.mule.tooling.client.startup.ToolingNotAvailableException: Tooling instance is not available, Using Java home C:\AnypointStudio\AnypointStudio\plugins\org.mule.tooling.jdk.win32.x86_64_1.4.1
+	at org.mule.tooling.client.startup.ToolingManager.setup(ToolingManager.java:211)
+	at org.mule.tooling.client.startup.ToolingManager.getToolingInstance(ToolingManager.java:163)
+	at org.mule.tooling.metadata.datasense.DataSenseJob.run(DataSenseJob.java:86)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.mule.tooling.core 4 0 2026-02-26 09:55:17.503
+!MESSAGE Error while resolving data sense
+!STACK 0
+org.mule.tooling.client.startup.ToolingNotAvailableException: Tooling instance is not available, Using Java home C:\AnypointStudio\AnypointStudio\plugins\org.mule.tooling.jdk.win32.x86_64_1.4.1
+	at org.mule.tooling.client.startup.ToolingManager.setup(ToolingManager.java:211)
+	at org.mule.tooling.client.startup.ToolingManager.getToolingInstance(ToolingManager.java:163)
+	at org.mule.tooling.metadata.datasense.DataSenseJob.run(DataSenseJob.java:86)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.mule.tooling.runtime 1 0 2026-02-26 10:01:52.600
+!MESSAGE Starting shell termination command "[taskkill, /F, /PID, 7876]"
+
+!ENTRY org.mule.tooling.runtime 1 0 2026-02-26 10:01:52.698
+!MESSAGE Finished shell termination command "[taskkill, /F, /PID, 7876]"
+
+!ENTRY org.mule.tooling.runtime 2 0 2026-02-26 10:01:53.146
+!MESSAGE Termination command ShellTerminationCommand [getTerminationCommand()=[taskkill, /F, /PID, 7876]] indicate retry action is necessary, moving on to next one
+
+!ENTRY org.mule.tooling.runtime 1 0 2026-02-26 10:01:53.155
+!MESSAGE Starting shell termination command "[taskkill, /F, /PID, 31576]"
+
+!ENTRY org.mule.tooling.runtime 1 0 2026-02-26 10:01:53.217
+!MESSAGE Finished shell termination command "[taskkill, /F, /PID, 31576]"
+
+!ENTRY org.mule.tooling.runtime 2 0 2026-02-26 10:01:53.592
+!MESSAGE Termination command ShellTerminationCommand [getTerminationCommand()=[taskkill, /F, /PID, 31576]] indicate retry action is necessary, moving on to next one
+
+!ENTRY org.mule.tooling.core 4 0 2026-02-26 10:31:13.989
+!MESSAGE Error while resolving data sense
+!STACK 0
+org.mule.tooling.client.startup.ToolingNotAvailableException: Tooling instance is not available, Using Java home C:\AnypointStudio\AnypointStudio\plugins\org.mule.tooling.jdk.win32.x86_64_1.4.1
+	at org.mule.tooling.client.startup.ToolingManager.setup(ToolingManager.java:211)
+	at org.mule.tooling.client.startup.ToolingManager.getToolingInstance(ToolingManager.java:163)
+	at org.mule.tooling.metadata.datasense.DataSenseJob.run(DataSenseJob.java:86)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.mule.tooling.core 4 0 2026-02-26 10:31:20.030
+!MESSAGE Error while resolving data sense
+!STACK 0
+org.mule.tooling.client.startup.ToolingNotAvailableException: Tooling instance is not available, Using Java home C:\AnypointStudio\AnypointStudio\plugins\org.mule.tooling.jdk.win32.x86_64_1.4.1
+	at org.mule.tooling.client.startup.ToolingManager.setup(ToolingManager.java:211)
+	at org.mule.tooling.client.startup.ToolingManager.getToolingInstance(ToolingManager.java:163)
+	at org.mule.tooling.metadata.datasense.DataSenseJob.run(DataSenseJob.java:86)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.mule.tooling.core 4 0 2026-02-26 10:31:26.061
+!MESSAGE Error while resolving data sense
+!STACK 0
+org.mule.tooling.client.startup.ToolingNotAvailableException: Tooling instance is not available, Using Java home C:\AnypointStudio\AnypointStudio\plugins\org.mule.tooling.jdk.win32.x86_64_1.4.1
+	at org.mule.tooling.client.startup.ToolingManager.setup(ToolingManager.java:211)
+	at org.mule.tooling.client.startup.ToolingManager.getToolingInstance(ToolingManager.java:163)
+	at org.mule.tooling.metadata.datasense.DataSenseJob.run(DataSenseJob.java:86)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.mule.tooling.maven 1 0 2026-02-26 10:32:14.640
+!MESSAGE  *** 24155 EmbeddedMavenRunner [configuration=DefaultMavenRunnerConfiguration [externalInstallation=false, mavenInstallationHome=C:\maven, mavenOpts=]]
+
+!ENTRY org.mule.tooling.core 4 0 2026-02-26 10:32:14.842
+!MESSAGE Error while resolving data sense
+!STACK 0
+org.mule.tooling.client.startup.ToolingNotAvailableException: Tooling instance is not available, Using Java home C:\AnypointStudio\AnypointStudio\plugins\org.mule.tooling.jdk.win32.x86_64_1.4.1
+	at org.mule.tooling.client.startup.ToolingManager.setup(ToolingManager.java:211)
+	at org.mule.tooling.client.startup.ToolingManager.getToolingInstance(ToolingManager.java:163)
+	at org.mule.tooling.metadata.datasense.DataSenseJob.run(DataSenseJob.java:86)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.mule.tooling.maven 1 0 2026-02-26 10:32:17.012
+!MESSAGE  *** 2098 EmbeddedMavenRunner [configuration=DefaultMavenRunnerConfiguration [externalInstallation=false, mavenInstallationHome=C:\maven, mavenOpts=]]
+
+!ENTRY org.mule.tooling.core 4 0 2026-02-26 10:32:17.218
+!MESSAGE Error while resolving data sense
+!STACK 0
+org.mule.tooling.client.startup.ToolingNotAvailableException: Tooling instance is not available, Using Java home C:\AnypointStudio\AnypointStudio\plugins\org.mule.tooling.jdk.win32.x86_64_1.4.1
+	at org.mule.tooling.client.startup.ToolingManager.setup(ToolingManager.java:211)
+	at org.mule.tooling.client.startup.ToolingManager.getToolingInstance(ToolingManager.java:163)
+	at org.mule.tooling.metadata.datasense.DataSenseJob.run(DataSenseJob.java:86)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.mule.tooling.core 4 0 2026-02-26 10:32:17.297
+!MESSAGE Error while resolving data sense
+!STACK 0
+org.mule.tooling.client.startup.ToolingNotAvailableException: Tooling instance is not available, Using Java home C:\AnypointStudio\AnypointStudio\plugins\org.mule.tooling.jdk.win32.x86_64_1.4.1
+	at org.mule.tooling.client.startup.ToolingManager.setup(ToolingManager.java:211)
+	at org.mule.tooling.client.startup.ToolingManager.getToolingInstance(ToolingManager.java:163)
+	at org.mule.tooling.metadata.datasense.DataSenseJob.run(DataSenseJob.java:86)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.mule.tooling.core 4 0 2026-02-26 10:32:17.358
+!MESSAGE Error while resolving data sense
+!STACK 0
+org.mule.tooling.client.startup.ToolingNotAvailableException: Tooling instance is not available, Using Java home C:\AnypointStudio\AnypointStudio\plugins\org.mule.tooling.jdk.win32.x86_64_1.4.1
+	at org.mule.tooling.client.startup.ToolingManager.setup(ToolingManager.java:211)
+	at org.mule.tooling.client.startup.ToolingManager.getToolingInstance(ToolingManager.java:163)
+	at org.mule.tooling.metadata.datasense.DataSenseJob.run(DataSenseJob.java:86)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
