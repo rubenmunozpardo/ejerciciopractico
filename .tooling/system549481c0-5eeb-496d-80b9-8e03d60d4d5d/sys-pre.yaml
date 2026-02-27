@@ -1,6 +1,0 @@
-# System API (PRE)
-api.port: "8080"
-api.id: "20754421"
-
-# System → (otros servicios PRE si aplica)
-# No outbound calls provided for PRE, so none are included.

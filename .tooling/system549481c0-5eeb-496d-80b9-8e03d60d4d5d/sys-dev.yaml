@@ -1,6 +1,0 @@
-# System API (DEV – CloudHub)
-api.port: "8080"
-api.id: "20754421"
-
-# System → (otros servicios si aplica)
-# No outbound calls provided for DEV, so none are included.
