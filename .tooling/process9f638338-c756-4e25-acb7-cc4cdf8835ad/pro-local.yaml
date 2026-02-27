@@ -1,0 +1,8 @@
+# Process API (LOCAL)
+api.port: "8081"
+api.id: "00000000"
+
+# Process → System (LOCAL)
+system.api.host: "localhost"
+system.api.port: "8080"
+system.api.protocol: "HTTP"
