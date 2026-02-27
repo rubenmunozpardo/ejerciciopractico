@@ -1,18 +1,7 @@
-# Experience API (local)
-api.port: "8082"
-api.id: "00000000"
+# Experience API (LOCAL)
+api.port: "8083"
 
-# Experience own properties (faltaban estas DOS)
-experience.api.host: "localhost"
-experience.api.port: "8082"
-experience.api.protocol: "HTTP"
-
-# Experience → Process (local)
+# Experience → Process (LOCAL)
 process.api.host: "localhost"
-process.api.port: "8081"
+process.api.port: "8082"
 process.api.protocol: "HTTP"
-
-# Experience → System (local)
-system.api.host: "localhost"
-system.api.port: "8080"
-system.api.protocol: "HTTP"

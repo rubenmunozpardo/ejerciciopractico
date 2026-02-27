@@ -1,15 +1,7 @@
-# Experience API (PRE)
-api.port: "8081"
-api.id: "20754418"
+# Process API (LOCAL)
+api.port: "8082"
 
-experience.api.protocol: "HTTP"
-
-# Experience → Process (PRE)
-process.api.host: "process-9c4ze4.5sc6y6-3.usa-e2.cloudhub.io"
-process.api.port: "443"
-process.api.protocol: "HTTPS"
-
-# Experience → System (PRE)
-system.api.host: "system-9c4ze4.5sc6y6-1.usa-e2.cloudhub.io"
-system.api.port: "443"
-system.api.protocol: "HTTPS"
+# Process → System (LOCAL)
+system.api.host: "localhost"
+system.api.port: "8081"
+system.api.protocol: "HTTP"
