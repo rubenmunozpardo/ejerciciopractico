@@ -1188,3 +1188,112 @@ java.lang.RuntimeException: Could not terminate launch ejercico
 
 !ENTRY org.mule.tooling.ui.contribution.munit 1 1 2026-03-02 17:20:29.856
 !MESSAGE Deleting MUnit temporary folder in C:\Users\RMUNOZ~1\AppData\Local\Temp\munit-temp-dir
+!SESSION 2026-03-02 17:23:14.784 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=17.0.12
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_GB
+Command-line arguments:  -os win32 -ws win32 -arch x86_64
+
+!ENTRY org.eclipse.ui 2 0 2026-03-02 17:24:11.198
+!MESSAGE Warnings while parsing the key bindings from the 'org.eclipse.ui.commands' and 'org.eclipse.ui.bindings' extension point
+!SUBENTRY 1 org.eclipse.ui 2 0 2026-03-02 17:24:11.198
+!MESSAGE Cannot bind to an undefined command: plug-in='org.mule.alsp', id='org.eclipse.tm4e.languageconfiguration.togglelinecommentcommand'
+
+!ENTRY org.mule.tooling.ui.contribution.munit 1 1 2026-03-02 17:24:45.109
+!MESSAGE Creating MUnit temporary folder in C:\Users\RMUNOZ~1\AppData\Local\Temp\munit-temp-dir
+
+!ENTRY org.eclipse.egit.ui 2 0 2026-03-02 17:24:47.706
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\rmunozpardo'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY org.mule.tooling.core 1 0 2026-03-02 17:25:03.145
+!MESSAGE Mule Version 4.11.0, was mapped to Tooling Version 4.11.0
+
+!ENTRY org.mule.tooling.core 1 0 2026-03-02 17:26:29.506
+!MESSAGE Checking updates in Exchange for: [org.mule.modules:mule-apikit-module, org.mule.connectors:mule-sockets-connector, org.mule.connectors:mule-http-connector]
+
+!ENTRY org.mule.tooling.core 1 0 2026-03-02 17:26:31.623
+!MESSAGE Check finished: all Mule Modules are up to date
+
+!ENTRY org.mule.tooling.runtime 1 0 2026-03-02 17:26:35.877
+!MESSAGE Starting shell termination command "[taskkill, /F, /PID, 21688]"
+
+!ENTRY org.mule.tooling.runtime 1 0 2026-03-02 17:26:35.930
+!MESSAGE Finished shell termination command "[taskkill, /F, /PID, 21688]"
+
+!ENTRY org.mule.tooling.runtime 1 0 2026-03-02 17:26:36.295
+!MESSAGE Starting shell termination command "[taskkill, /F, /PID, 25316]"
+
+!ENTRY org.mule.tooling.runtime 1 0 2026-03-02 17:26:36.339
+!MESSAGE Finished shell termination command "[taskkill, /F, /PID, 25316]"
+
+!ENTRY org.mule.tooling.runtime 2 0 2026-03-02 17:26:36.648
+!MESSAGE Termination command ShellTerminationCommand [getTerminationCommand()=[]] indicate retry action is necessary, moving on to next one
+
+!ENTRY org.mule.tooling.core 4 0 2026-03-02 17:26:36.653
+!MESSAGE Error preparing tooling instance
+!STACK 0
+org.mule.tooling.runtime.controller.MuleControllerException: Timeout while starting mule instance
+	at org.mule.tooling.runtime.controller.MuleController.start(MuleController.java:163)
+	at org.mule.tooling.client.startup.ToolingManager.setup(ToolingManager.java:343)
+	at org.mule.tooling.client.startup.ToolingManager.getToolingInstance(ToolingManager.java:163)
+	at org.mule.tooling.client.startup.ToolingClientStartup$1.lambda$0(ToolingClientStartup.java:24)
+	at java.base/java.util.Optional.ifPresent(Optional.java:178)
+	at org.mule.tooling.client.startup.ToolingClientStartup$1.run(ToolingClientStartup.java:22)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+Caused by: org.awaitility.core.ConditionTimeoutException: Condition with org.mule.tooling.runtime.controller.MuleController was not fulfilled within 1 minutes 30 seconds.
+	at org.awaitility.core.ConditionAwaiter.await(ConditionAwaiter.java:148)
+	at org.awaitility.core.CallableCondition.await(CallableCondition.java:78)
+	at org.awaitility.core.CallableCondition.await(CallableCondition.java:26)
+	at org.awaitility.core.ConditionFactory.until(ConditionFactory.java:873)
+	at org.awaitility.core.ConditionFactory.until(ConditionFactory.java:842)
+	at org.mule.tooling.runtime.controller.MuleController.start(MuleController.java:147)
+	... 6 more
+
+!ENTRY org.mule.tooling.core 4 0 2026-03-02 17:26:36.654
+!MESSAGE Tooling instance could not be started, another attempt will be made
+!STACK 0
+org.mule.tooling.client.startup.ToolingNotAvailableException: Tooling instance could not be started, another attempt will be made
+	at org.mule.tooling.client.startup.ToolingManager.setup(ToolingManager.java:356)
+	at org.mule.tooling.client.startup.ToolingManager.getToolingInstance(ToolingManager.java:163)
+	at org.mule.tooling.client.startup.ToolingClientStartup$1.lambda$0(ToolingClientStartup.java:24)
+	at java.base/java.util.Optional.ifPresent(Optional.java:178)
+	at org.mule.tooling.client.startup.ToolingClientStartup$1.run(ToolingClientStartup.java:22)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+Caused by: org.mule.tooling.runtime.controller.MuleControllerException: Timeout while starting mule instance
+	at org.mule.tooling.runtime.controller.MuleController.start(MuleController.java:163)
+	at org.mule.tooling.client.startup.ToolingManager.setup(ToolingManager.java:343)
+	... 5 more
+Caused by: org.awaitility.core.ConditionTimeoutException: Condition with org.mule.tooling.runtime.controller.MuleController was not fulfilled within 1 minutes 30 seconds.
+	at org.awaitility.core.ConditionAwaiter.await(ConditionAwaiter.java:148)
+	at org.awaitility.core.CallableCondition.await(CallableCondition.java:78)
+	at org.awaitility.core.CallableCondition.await(CallableCondition.java:26)
+	at org.awaitility.core.ConditionFactory.until(ConditionFactory.java:873)
+	at org.awaitility.core.ConditionFactory.until(ConditionFactory.java:842)
+	at org.mule.tooling.runtime.controller.MuleController.start(MuleController.java:147)
+	... 6 more
+
+!ENTRY org.mule.tooling.maven 1 0 2026-03-02 17:28:22.937
+!MESSAGE  *** 57396 EmbeddedMavenRunner [configuration=MavenPreferences [isDontWarnAgainIfNoInstallationFoundChecked()=false, isGlobalMavenSupportEnabled()=true, getMavenInstallationHome()=C:\maven, getMavenOpts()=, getDefaultGroupId()=com.mycompany, getBaseCommandline()=mvn clean package -nsu -DskipMunitTests, isDisplayRuntimeVersionWarning()=true, isExternalInstallation()=false]]
+
+!ENTRY org.mule.tooling.maven 1 0 2026-03-02 17:30:24.566
+!MESSAGE  *** 46985 EmbeddedMavenRunner [configuration=MavenPreferences [isDontWarnAgainIfNoInstallationFoundChecked()=false, isGlobalMavenSupportEnabled()=true, getMavenInstallationHome()=C:\maven, getMavenOpts()=, getDefaultGroupId()=com.mycompany, getBaseCommandline()=mvn clean package -nsu -DskipMunitTests, isDisplayRuntimeVersionWarning()=true, isExternalInstallation()=false]]
+
+!ENTRY org.mule.tooling.maven 1 0 2026-03-02 17:31:52.627
+!MESSAGE  *** 45795 EmbeddedMavenRunner [configuration=MavenPreferences [isDontWarnAgainIfNoInstallationFoundChecked()=false, isGlobalMavenSupportEnabled()=true, getMavenInstallationHome()=C:\maven, getMavenOpts()=, getDefaultGroupId()=com.mycompany, getBaseCommandline()=mvn clean package -nsu -DskipMunitTests, isDisplayRuntimeVersionWarning()=true, isExternalInstallation()=false]]
+
+!ENTRY org.mule.tooling.maven 1 0 2026-03-02 17:41:23.354
+!MESSAGE  *** 33742 EmbeddedMavenRunner [configuration=MavenPreferences [isDontWarnAgainIfNoInstallationFoundChecked()=false, isGlobalMavenSupportEnabled()=true, getMavenInstallationHome()=C:\maven, getMavenOpts()=, getDefaultGroupId()=com.mycompany, getBaseCommandline()=mvn clean package -nsu -DskipMunitTests, isDisplayRuntimeVersionWarning()=true, isExternalInstallation()=false]]
+
+!ENTRY org.mule.tooling.maven 1 0 2026-03-02 17:41:40.722
+!MESSAGE  *** 10989 EmbeddedMavenRunner [configuration=MavenPreferences [isDontWarnAgainIfNoInstallationFoundChecked()=false, isGlobalMavenSupportEnabled()=true, getMavenInstallationHome()=C:\maven, getMavenOpts()=, getDefaultGroupId()=com.mycompany, getBaseCommandline()=mvn clean package -nsu -DskipMunitTests, isDisplayRuntimeVersionWarning()=true, isExternalInstallation()=false]]
+
+!ENTRY org.mule.tooling.maven 1 0 2026-03-02 17:41:52.748
+!MESSAGE  *** 11955 EmbeddedMavenRunner [configuration=MavenPreferences [isDontWarnAgainIfNoInstallationFoundChecked()=false, isGlobalMavenSupportEnabled()=true, getMavenInstallationHome()=C:\maven, getMavenOpts()=, getDefaultGroupId()=com.mycompany, getBaseCommandline()=mvn clean package -nsu -DskipMunitTests, isDisplayRuntimeVersionWarning()=true, isExternalInstallation()=false]]
+
+!ENTRY org.mule.tooling.ui.contribution.munit 1 1 2026-03-02 17:46:12.416
+!MESSAGE Deleting MUnit temporary folder in C:\Users\RMUNOZ~1\AppData\Local\Temp\munit-temp-dir
