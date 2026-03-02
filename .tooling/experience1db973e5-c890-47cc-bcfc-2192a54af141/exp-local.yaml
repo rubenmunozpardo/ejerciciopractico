@@ -1,0 +1,8 @@
+# Experience API (LOCAL)
+api.port: "8083"
+
+# Experience → Process (LOCAL)
+process.api.host: "localhost"
+process.api.port: "8082"
+process.api.protocol: "HTTP"
+

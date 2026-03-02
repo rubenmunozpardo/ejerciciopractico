@@ -1,0 +1,17 @@
+api.port: "8081"
+
+
+experience.api.protocol: "HTTPS"
+
+
+# Experience → Process
+process.api.host: ""
+process.api.port: "443"
+process.api.protocol: "HTTPS"
+
+# Experience → System
+system.api.host: ""
+system.api.port: "443"
+system.api.protocol: "HTTPS"
+
+api.id: "20768837"
