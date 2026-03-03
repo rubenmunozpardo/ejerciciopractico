@@ -1,8 +1,5 @@
-# Process API (LOCAL)
 api.port: "8082"
-
-# Process → System (LOCAL)
+http.port: "8082"
 system.api.host: "localhost"
 system.api.port: "8081"
 system.api.protocol: "HTTP"
-http.port: "8082"

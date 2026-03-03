@@ -6,8 +6,11 @@
     <apikit:config name="process-config" api="resource::20a1f58d-0747-4ed0-a965-d048572aa2ac:api-process:1.0.0:raml:zip:api-process.raml" outboundHeadersMapName="outboundHeaders" httpStatusVarName="httpStatus" />
     <configuration-properties doc:name="Configuration properties" doc:id="b80c769c-710d-4533-a498-7b9b3aeccf91" file="pro-local.yaml" />
 	<configuration-properties doc:name="Configuration properties" doc:id="839d3932-7e46-4e1a-a9a2-84f31ff24b87" file="process.properties" />
+	<http:request-config name="HTTP_Request_config" doc:name="HTTP Request config" doc:id="06d34d34-f374-4e2b-807a-e5407f92e745" >
+		<http:request-connection host="${system.api.host}" port="${system.api.port}"/>
+	</http:request-config>
 	<flow name="process-main">
-        <http:listener config-ref="process-httpListenerConfig" path="/*">
+        <http:listener config-ref="process-httpListenerConfig" path="/process/*">
             <http:response statusCode="#[vars.httpStatus default 200]">
                 <http:headers><![CDATA[#[vars.outboundHeaders default {}]]]></http:headers>
             </http:response>
@@ -126,19 +129,8 @@ output application/json
         </error-handler>
     </flow>
     <flow name="get:\accounts:process-config">
-        <ee:transform doc:name="Transform Message">
-            <ee:message>
-                <ee:set-payload><![CDATA[%dw 2.0
-output application/json
----
-[
-  {
-    id: 1,
-    name: "John Smith",
-    email: "john.smith@example.com"
-  }
-] as Array {encoding: "UTF-8", mediaType: "application/json"}]]></ee:set-payload>
-            </ee:message>
-        </ee:transform>
+        <logger level="INFO" doc:name="Logger" doc:id="4a0c9980-e608-4c20-b4e0-2e3440631eaa" message="antes de system"/>
+		<http:request doc:name="Request" doc:id="22e4e1ff-6050-41cc-bd74-239936434e07" config-ref="HTTP_Request_config" path="system/accounts"/>
+		<logger level="INFO" doc:name="Logger" doc:id="7f105d2a-610c-4fb0-8c90-13ae8c8f70b8" message="despues de system"/>
     </flow>
 </mule>

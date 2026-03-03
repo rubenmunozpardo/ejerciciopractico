@@ -1,5 +1,0 @@
-# System API (DEV – CloudHub)
-api.port: "8081"
-api.id: "20768839"
-
-http.port: "8081"

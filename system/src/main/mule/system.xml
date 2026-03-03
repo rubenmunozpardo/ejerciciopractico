@@ -7,7 +7,7 @@
     <configuration-properties doc:name="Configuration properties" doc:id="041f7ac2-ce35-4daf-8d34-b0be03dd4220" file="sys-local.yaml" />
 	<configuration-properties doc:name="Configuration properties" doc:id="abedeadf-7630-443b-a9e7-691094c2b7ae" file="system.properties" />
 	<flow name="system-main">
-        <http:listener config-ref="system-httpListenerConfig" path="/*">
+        <http:listener config-ref="system-httpListenerConfig" path="/system/accounts">
             <http:response statusCode="#[vars.httpStatus default 200]">
                 <http:headers><![CDATA[#[vars.outboundHeaders default {}]]]></http:headers>
             </http:response>
@@ -126,7 +126,8 @@ output application/json
         </error-handler>
     </flow>
     <flow name="get:\accounts:system-config">
-        <ee:transform doc:name="Transform Message">
+        <logger level="INFO" doc:name="Logger" doc:id="b44dc6bd-47a4-49fd-af31-3a13b8f17671" />
+		<ee:transform doc:name="Transform Message">
             <ee:message>
                 <ee:set-payload><![CDATA[%dw 2.0
 output application/json
@@ -134,11 +135,12 @@ output application/json
 [
   {
     id: 1,
-    name: "John Smith",
+    name: "John Smith from system",
     email: "john.smith@example.com"
   }
 ] as Array {encoding: "UTF-8", mediaType: "application/json"}]]></ee:set-payload>
             </ee:message>
         </ee:transform>
+		<logger level="INFO" doc:name="Logger" doc:id="71fc0ff5-1040-409c-bdb5-c6d248a2891b" />
     </flow>
 </mule>
