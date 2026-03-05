@@ -10,64 +10,64 @@
 	</natures>
 	<linkedResources>
 		<link>
-			<name>.link1</name>
+			<name>.link13</name>
 			<type>2</type>
-			<location>C:/AnypointStudio/AnypointStudio/plugins/org.mule.tooling.server.4.11.ee_7.24.0.202602021436/mule/lib/boot/tanuki</location>
+			<location>C:/AnypointStudio/plugins/org.mule.tooling.server.4.11.ee_7.24.0.202602021436/mule/lib/boot/tanuki</location>
 		</link>
 		<link>
-			<name>.link10</name>
+			<name>.link14</name>
 			<type>2</type>
-			<location>C:/AnypointStudio/AnypointStudio/plugins/org.mule.tooling.server.4.11.ee_7.24.0.202602021436/mule/services/mule-service-soap-1.9.3</location>
+			<location>C:/AnypointStudio/plugins/org.mule.tooling.server.4.11.ee_7.24.0.202602021436/mule/lib/mule/jdk-17</location>
 		</link>
 		<link>
-			<name>.link11</name>
+			<name>.link15</name>
 			<type>2</type>
-			<location>C:/AnypointStudio/AnypointStudio/plugins/org.mule.tooling.server.4.11.ee_7.24.0.202602021436/mule/services/mule-service-weave-ee-2.11.0</location>
+			<location>C:/AnypointStudio/plugins/org.mule.tooling.server.4.11.ee_7.24.0.202602021436/mule/lib/mule/repository</location>
 		</link>
 		<link>
-			<name>.link12</name>
+			<name>.link16</name>
 			<type>2</type>
-			<location>C:/AnypointStudio/AnypointStudio/plugins/org.mule.tooling.server.4.11.ee_7.24.0.202602021436/mule/conf</location>
+			<location>C:/AnypointStudio/plugins/org.mule.tooling.server.4.11.ee_7.24.0.202602021436/mule/lib/opt/jdk-17</location>
 		</link>
 		<link>
-			<name>.link2</name>
+			<name>.link17</name>
 			<type>2</type>
-			<location>C:/AnypointStudio/AnypointStudio/plugins/org.mule.tooling.server.4.11.ee_7.24.0.202602021436/mule/lib/mule/jdk-17</location>
+			<location>C:/AnypointStudio/plugins/org.mule.tooling.server.4.11.ee_7.24.0.202602021436/mule/services/api-gateway-contract-service-1.7.0</location>
 		</link>
 		<link>
-			<name>.link3</name>
+			<name>.link18</name>
 			<type>2</type>
-			<location>C:/AnypointStudio/AnypointStudio/plugins/org.mule.tooling.server.4.11.ee_7.24.0.202602021436/mule/lib/mule/repository</location>
+			<location>C:/AnypointStudio/plugins/org.mule.tooling.server.4.11.ee_7.24.0.202602021436/mule/services/api-gateway-events-collector-service-1.7.0</location>
 		</link>
 		<link>
-			<name>.link4</name>
+			<name>.link19</name>
 			<type>2</type>
-			<location>C:/AnypointStudio/AnypointStudio/plugins/org.mule.tooling.server.4.11.ee_7.24.0.202602021436/mule/lib/opt/jdk-17</location>
+			<location>C:/AnypointStudio/plugins/org.mule.tooling.server.4.11.ee_7.24.0.202602021436/mule/services/mule-service-http-ee-1.14.0</location>
 		</link>
 		<link>
-			<name>.link5</name>
+			<name>.link20</name>
 			<type>2</type>
-			<location>C:/AnypointStudio/AnypointStudio/plugins/org.mule.tooling.server.4.11.ee_7.24.0.202602021436/mule/services/api-gateway-contract-service-1.7.0</location>
+			<location>C:/AnypointStudio/plugins/org.mule.tooling.server.4.11.ee_7.24.0.202602021436/mule/services/mule-service-oauth-ee-1.8.0</location>
 		</link>
 		<link>
-			<name>.link6</name>
+			<name>.link21</name>
 			<type>2</type>
-			<location>C:/AnypointStudio/AnypointStudio/plugins/org.mule.tooling.server.4.11.ee_7.24.0.202602021436/mule/services/api-gateway-events-collector-service-1.7.0</location>
+			<location>C:/AnypointStudio/plugins/org.mule.tooling.server.4.11.ee_7.24.0.202602021436/mule/services/mule-service-scheduler-1.11.0</location>
 		</link>
 		<link>
-			<name>.link7</name>
+			<name>.link22</name>
 			<type>2</type>
-			<location>C:/AnypointStudio/AnypointStudio/plugins/org.mule.tooling.server.4.11.ee_7.24.0.202602021436/mule/services/mule-service-http-ee-1.14.0</location>
+			<location>C:/AnypointStudio/plugins/org.mule.tooling.server.4.11.ee_7.24.0.202602021436/mule/services/mule-service-soap-1.9.3</location>
 		</link>
 		<link>
-			<name>.link8</name>
+			<name>.link23</name>
 			<type>2</type>
-			<location>C:/AnypointStudio/AnypointStudio/plugins/org.mule.tooling.server.4.11.ee_7.24.0.202602021436/mule/services/mule-service-oauth-ee-1.8.0</location>
+			<location>C:/AnypointStudio/plugins/org.mule.tooling.server.4.11.ee_7.24.0.202602021436/mule/services/mule-service-weave-ee-2.11.0</location>
 		</link>
 		<link>
-			<name>.link9</name>
+			<name>.link24</name>
 			<type>2</type>
-			<location>C:/AnypointStudio/AnypointStudio/plugins/org.mule.tooling.server.4.11.ee_7.24.0.202602021436/mule/services/mule-service-scheduler-1.11.0</location>
+			<location>C:/AnypointStudio/plugins/org.mule.tooling.server.4.11.ee_7.24.0.202602021436/mule/conf</location>
 		</link>
 	</linkedResources>
 </projectDescription>
