@@ -5,15 +5,15 @@ http://www.mulesoft.org/schema/mule/secure-properties http://www.mulesoft.org/sc
         <http:listener-connection host="0.0.0.0" port="${http.port}" />
     </http:listener-config>
     <apikit:config name="process-config" api="resource::20a1f58d-0747-4ed0-a965-d048572aa2ac:api-process:1.0.0:raml:zip:api-process.raml" outboundHeadersMapName="outboundHeaders" httpStatusVarName="httpStatus" />
-    <configuration-properties doc:name="Configuration properties" doc:id="b80c769c-710d-4533-a498-7b9b3aeccf91" file="pro-${mule.ch.env}.yaml" />
+        <configuration-properties doc:name="Configuration properties" doc:id="8d975e6e-1df9-4ea0-bdc4-6a8525b01ef8" file="pro-${mule.ch.env}.yaml" />
+    	<global-property doc:name="Global Property" doc:id="ad644cf6-3791-40da-8647-3c6271e96074" name="mule.ch.env" value="${mule.ch.env}" />
 	<http:request-config name="HTTP_Request_config" doc:name="HTTP Request config" doc:id="06d34d34-f374-4e2b-807a-e5407f92e745" >
 		<http:request-connection host="${system.api.host}" port="${system.api.port}"/>
 	</http:request-config>
-	<global-property doc:name="Global Property" doc:id="e14fb03f-2cf1-448e-bb6a-53ae853fb094" name="mule.ch.env" value="dev" />
 	<secure-properties:config name="Secure_Properties_Config" doc:name="Secure Properties Config" doc:id="11ec20f2-025f-4aa5-b207-ff4a17330107" file="process.properties" key="${secure.key}" >
 	</secure-properties:config>
 	<flow name="process-main">
-        <http:listener config-ref="process-httpListenerConfig" path="/process/*">
+        <http:listener config-ref="process-httpListenerConfig" path="/accounts">
             <http:response statusCode="#[vars.httpStatus default 200]">
                 <http:headers><![CDATA[#[vars.outboundHeaders default {}]]]></http:headers>
             </http:response>
@@ -133,7 +133,7 @@ output application/json
     </flow>
     <flow name="get:\accounts:process-config">
         <logger level="INFO" doc:name="Logger" doc:id="4a0c9980-e608-4c20-b4e0-2e3440631eaa" message="antes de system"/>
-		<http:request doc:name="Request" doc:id="22e4e1ff-6050-41cc-bd74-239936434e07" config-ref="HTTP_Request_config" path="system/accounts"/>
+		<http:request doc:name="Request" doc:id="22e4e1ff-6050-41cc-bd74-239936434e07" config-ref="HTTP_Request_config" path="/accounts"/>
 		<logger level="INFO" doc:name="Logger" doc:id="7f105d2a-610c-4fb0-8c90-13ae8c8f70b8" message="despues de system"/>
     </flow>
 </mule>

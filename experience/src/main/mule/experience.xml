@@ -5,15 +5,14 @@ http://www.mulesoft.org/schema/mule/secure-properties http://www.mulesoft.org/sc
         <http:listener-connection host="0.0.0.0" port="${http.port}" />
     </http:listener-config>
     <apikit:config name="experience-config" api="resource::20a1f58d-0747-4ed0-a965-d048572aa2ac:api-experience:1.0.0:raml:zip:api-experience.raml" outboundHeadersMapName="outboundHeaders" httpStatusVarName="httpStatus" />
-	<configuration-properties doc:name="Configuration properties" doc:id="060e1c98-d293-411c-b860-2e38e48ca3e6" file="exp-local.yaml" />
-	<http:request-config name="HTTP_Request_config" doc:name="HTTP Request config" doc:id="c2e7b9ee-ea70-4d78-acab-35d8f972e6b7" >
+        <configuration-properties doc:name="Configuration properties" doc:id="7c7bb500-86d4-4f20-9ab6-67fbc1e585d9" file="exp-${mule.ch.env}.yaml" />
+    	<global-property doc:name="Global Property" doc:id="40be904e-df7a-4fe1-8bf1-0671e0081ac3" name="mule.ch.env" value="${mule.ch.env}" />	<http:request-config name="HTTP_Request_config" doc:name="HTTP Request config" doc:id="c2e7b9ee-ea70-4d78-acab-35d8f972e6b7" >
 		<http:request-connection host="${process.api.host}" port="${process.api.port}" />
 	</http:request-config>
-	<global-property doc:name="Global Property" doc:id="7dab2242-ca23-410d-afb3-ad0d70a47254" name="mule.ch.env" value="dev" />
 	<secure-properties:config name="Secure_Properties_Config" doc:name="Secure Properties Config" doc:id="b6c5c85b-7ce1-40f9-8abd-a094bf397ab7" file="experience.properties" key="${secure.key}" >
 	</secure-properties:config>
 	<flow name="experience-main">
-        <http:listener config-ref="experience-httpListenerConfig" path="/experience/*">
+        <http:listener config-ref="experience-httpListenerConfig" path="/accounts">
             <http:response statusCode="#[vars.httpStatus default 200]">
                 <http:headers><![CDATA[#[vars.outboundHeaders default {}]]]></http:headers>
             </http:response>
@@ -133,7 +132,7 @@ output application/json
     </flow>
     <flow name="get:\accounts:experience-config">
 		<logger level="INFO" doc:name="Logger" doc:id="8909c368-373b-455e-9ba4-b51366dcc249" message="antes de process"/>
-		<http:request doc:name="Request" doc:id="51faa4cb-c341-408d-96e2-a746448faaa2" config-ref="HTTP_Request_config" path="/process/accounts"/>
+		<http:request doc:name="Request" doc:id="51faa4cb-c341-408d-96e2-a746448faaa2" config-ref="HTTP_Request_config" path="/accounts"/>
 		<logger level="INFO" doc:name="Logger" doc:id="29ef14ce-70b7-4417-b23f-b2cb20a06d35" message="después de process"/>
     </flow>
 </mule>

@@ -1,3 +1,4 @@
-api.port: "8091"
+api.port: "8081"
+http.port: "8081"
 api.id: "20769834"
-http.port: "8091"
+system.api.protocol: "HTTPS"
