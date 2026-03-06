@@ -10,7 +10,7 @@ http://www.mulesoft.org/schema/mule/secure-properties http://www.mulesoft.org/sc
 		<http:request-connection host="${process.api.host}" port="${process.api.port}" />
 	</http:request-config>
 	<global-property doc:name="Global Property" doc:id="7dab2242-ca23-410d-afb3-ad0d70a47254" name="mule.ch.env" value="dev" />
-	<secure-properties:config name="Secure_Properties_Config" doc:name="Secure Properties Config" doc:id="b6c5c85b-7ce1-40f9-8abd-a094bf397ab7" file="properties/experience.properties" key="${secure.key}" >
+	<secure-properties:config name="Secure_Properties_Config" doc:name="Secure Properties Config" doc:id="b6c5c85b-7ce1-40f9-8abd-a094bf397ab7" file="experience.properties" key="${secure.key}" >
 	</secure-properties:config>
 	<flow name="experience-main">
         <http:listener config-ref="experience-httpListenerConfig" path="/experience/*">
