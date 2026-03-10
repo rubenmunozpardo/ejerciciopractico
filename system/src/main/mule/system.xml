@@ -1,12 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <mule xmlns:secure-properties="http://www.mulesoft.org/schema/mule/secure-properties" xmlns="http://www.mulesoft.org/schema/mule/core" xmlns:apikit="http://www.mulesoft.org/schema/mule/mule-apikit" xmlns:doc="http://www.mulesoft.org/schema/mule/documentation" xmlns:ee="http://www.mulesoft.org/schema/mule/ee/core" xmlns:http="http://www.mulesoft.org/schema/mule/http" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.mulesoft.org/schema/mule/core http://www.mulesoft.org/schema/mule/core/current/mule.xsd http://www.mulesoft.org/schema/mule/http http://www.mulesoft.org/schema/mule/http/current/mule-http.xsd http://www.mulesoft.org/schema/mule/mule-apikit http://www.mulesoft.org/schema/mule/mule-apikit/current/mule-apikit.xsd http://www.mulesoft.org/schema/mule/ee/core http://www.mulesoft.org/schema/mule/ee/core/current/mule-ee.xsd 
 http://www.mulesoft.org/schema/mule/secure-properties http://www.mulesoft.org/schema/mule/secure-properties/current/mule-secure-properties.xsd">
+            <configuration-properties doc:name="Configuration properties" doc:id="1a3f12a9-cf41-449a-b734-1f5f104f8687" file="sys-${mule.ch.env}.yaml" />
+    	<global-property doc:name="Global Property" doc:id="419f7b1f-091b-4498-8c2d-e0730a74e698" name="mule.ch.env" value="${mule.ch.env}" />
     <http:listener-config name="system-httpListenerConfig">
-        <http:listener-connection host="0.0.0.0" port="${http.port}" protocol="${system.api.protocol}"/>
+        <http:listener-connection host="0.0.0.0" port="${http.port}" protocol="${api.protocol}"/>
     </http:listener-config>
     <apikit:config name="system-config" api="resource::20a1f58d-0747-4ed0-a965-d048572aa2ac:api-system:1.0.0:raml:zip:api-system.raml" outboundHeadersMapName="outboundHeaders" httpStatusVarName="httpStatus" />
-        <configuration-properties doc:name="Configuration properties" doc:id="1da5051a-c6ad-48d7-a9f5-6e6284844727" file="sys-${mule.ch.env}.yaml" />
-    	<global-property doc:name="Global Property" doc:id="f4a58a74-776e-4aec-b61a-f1d4df7cbbb2" name="mule.ch.env" value="${mule.ch.env}" />
+
 
 
 	<secure-properties:config name="Secure_Properties_Config" doc:name="Secure Properties Config" doc:id="fa8aad0d-127a-46c8-bf79-e225db2b459c" file="system.properties" key="${secure.key}" >

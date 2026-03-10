@@ -1,13 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <mule xmlns:secure-properties="http://www.mulesoft.org/schema/mule/secure-properties" xmlns="http://www.mulesoft.org/schema/mule/core" xmlns:apikit="http://www.mulesoft.org/schema/mule/mule-apikit" xmlns:doc="http://www.mulesoft.org/schema/mule/documentation" xmlns:ee="http://www.mulesoft.org/schema/mule/ee/core" xmlns:http="http://www.mulesoft.org/schema/mule/http" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.mulesoft.org/schema/mule/core http://www.mulesoft.org/schema/mule/core/current/mule.xsd http://www.mulesoft.org/schema/mule/http http://www.mulesoft.org/schema/mule/http/current/mule-http.xsd http://www.mulesoft.org/schema/mule/mule-apikit http://www.mulesoft.org/schema/mule/mule-apikit/current/mule-apikit.xsd http://www.mulesoft.org/schema/mule/ee/core http://www.mulesoft.org/schema/mule/ee/core/current/mule-ee.xsd 
 http://www.mulesoft.org/schema/mule/secure-properties http://www.mulesoft.org/schema/mule/secure-properties/current/mule-secure-properties.xsd">
-    <http:listener-config name="experience-httpListenerConfig">
+    <configuration-properties doc:name="Configuration properties" doc:id="580ab77c-bdf9-4810-97d3-dd6c23fe42b7" file="exp-${mule.ch.env}.yaml" />
+    	<global-property doc:name="Global Property" doc:id="fae64146-a8cc-48d3-be6e-8a8cc2f31d4e" name="mule.ch.env" value="${mule.ch.env}" />
+    	<http:listener-config name="experience-httpListenerConfig">
         <http:listener-connection host="0.0.0.0" port="${http.port}" />
     </http:listener-config>
     <apikit:config name="experience-config" api="resource::20a1f58d-0747-4ed0-a965-d048572aa2ac:api-experience:1.0.0:raml:zip:api-experience.raml" outboundHeadersMapName="outboundHeaders" httpStatusVarName="httpStatus" />
-        <configuration-properties doc:name="Configuration properties" doc:id="7c7bb500-86d4-4f20-9ab6-67fbc1e585d9" file="exp-${mule.ch.env}.yaml" />
-    	<global-property doc:name="Global Property" doc:id="40be904e-df7a-4fe1-8bf1-0671e0081ac3" name="mule.ch.env" value="${mule.ch.env}" />	<http:request-config name="HTTP_Request_config" doc:name="HTTP Request config" doc:id="c2e7b9ee-ea70-4d78-acab-35d8f972e6b7" >
-		<http:request-connection host="${process.api.host}" port="${process.api.port}" />
+        	<http:request-config name="HTTP_Request_config" doc:name="HTTP Request config" doc:id="c2e7b9ee-ea70-4d78-acab-35d8f972e6b7" >
+	<http:request-connection host="${process.api.host}" port="${process.api.port}" protocol="${process.api.protocol}"/>
 	</http:request-config>
 	<secure-properties:config name="Secure_Properties_Config" doc:name="Secure Properties Config" doc:id="b6c5c85b-7ce1-40f9-8abd-a094bf397ab7" file="experience.properties" key="${secure.key}" >
 	</secure-properties:config>

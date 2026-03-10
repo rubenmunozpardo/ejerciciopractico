@@ -1,3 +1,0 @@
-api.port: "8081"
-http.port: "8081"
-system.api.protocol: "HTTP"

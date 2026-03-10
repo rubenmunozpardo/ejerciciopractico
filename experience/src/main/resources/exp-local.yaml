@@ -1,5 +1,6 @@
 api.port: "8083"
 http.port: "8083"
+api.protocol: "HTTP"
 process.api.host: "localhost"
 process.api.port: "8082"
 process.api.protocol: "HTTP"

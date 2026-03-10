@@ -1,13 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <section name="Workbench">
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
-		<item key="selection" value="system"/>
+		<item key="selection" value="api.pro"/>
 		<item key="wrap" value="true"/>
 		<item key="casesensitive" value="false"/>
 		<item key="wholeword" value="false"/>
 		<item key="incremental" value="false"/>
 		<item key="isRegEx" value="false"/>
 		<list key="findhistory">
+			<item value="api.pro"/>
+			<item value="api"/>
 			<item value="system"/>
 			<item value="process"/>
 			<item value="payload"/>
@@ -16,13 +18,11 @@
 			<item value="apikit"/>
 			<item value="classifier"/>
 			<item value="rest"/>
-			<item value="api"/>
 			<item value=".api"/>
 			<item value="experience.ap"/>
 			<item value=":"/>
 			<item value="="/>
 			<item value="request-config"/>
-			<item value="rocess-request-config"/>
 		</list>
 		<list key="replacehistory">
 			<item value=": "/>

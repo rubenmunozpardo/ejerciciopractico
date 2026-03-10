@@ -1,5 +1,6 @@
 api.port: "8082"
 http.port: "8082"
+api.protocol: "HTTP"
 system.api.host: "localhost"
 system.api.port: "8081"
 system.api.protocol: "HTTP"
